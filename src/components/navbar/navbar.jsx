@@ -1,7 +1,6 @@
-import { Box, Typography, List, ListItem, ListItemText } from "@mui/material";
-import React, { useState } from "react";
+import { Box, List } from "@mui/material";
+import React from "react";
 import logo from "../../assets/img/Logo.jpg";
-import { Link } from "react-router-dom";
 import { navbar } from "./navbarInfo";
 import NavItemBlock from "./navItemBlock";
 
