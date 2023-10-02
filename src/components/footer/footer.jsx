@@ -3,6 +3,7 @@ import React from "react";
 import logo from "../../assets/img/Logo.jpg";
 import { footer } from "./footerInfo";
 import FooterLinkBloack from "./footerLinkBlock";
+import { mainWidth } from "../../config";
 
 function Footer() {
     const flexboxstyle = { padding: "1.5rem",flex: 1 };
@@ -12,7 +13,7 @@ function Footer() {
         <Box
             sx={{
             margin: "auto",
-            maxWidth: "1300px",
+            width: mainWidth,
             display: "flex",
             justifyContent: "space-between",
             }}
@@ -55,7 +56,9 @@ function Footer() {
             <Typography variant="h6" color="initial">
                 {footer.contactTitle}
             </Typography>
-            <Typography variant="body1" color="initial">{footer.address}</Typography>
+            <Typography variant="body1" color="initial" sx={{marginY:"0.5rem"}}>{footer.address}</Typography>
+            <Typography variant="body1" color="initial" sx={{marginY:"0.5rem"}}>{footer.mail}</Typography>
+            <Typography variant="body1" color="initial" sx={{marginY:"0.5rem"}}>{footer.phone}</Typography>
             </Box>
         </Box>
         </Box>

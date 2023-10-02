@@ -3,6 +3,7 @@ import React from "react";
 import logo from "../../assets/img/Logo.jpg";
 import { navbar } from "./navbarInfo";
 import NavItemBlock from "./navItemBlock";
+import { mainWidth } from "../../config";
 
 function NavBar() {
     return (
@@ -15,7 +16,7 @@ function NavBar() {
         <Box
             sx={{
             display: "flex",
-            maxWidth: "1300px",
+            width: mainWidth,
             margin: "auto",
             justifyContent: "space-between",
             alignItems: "center",

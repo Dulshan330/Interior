@@ -1,6 +1,7 @@
 import { ListItem } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { balck } from "../../config";
 
 function FooterLinkBloack(props) {
 
@@ -12,7 +13,7 @@ function FooterLinkBloack(props) {
             to={link}
             style={{
             textDecoration: "none",
-            color:"#000000",
+            color:balck,
             fontFamily: "roboto,sans-serif",
             fontSize: "16px",
             }}

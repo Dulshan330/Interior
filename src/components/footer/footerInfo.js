@@ -3,7 +3,7 @@ export const footer = {
         "It is a long established fact that a reader will be distracted lookings.",
     pagesTitle: "Pages",
     pages: [
-        { text: "About Us", link: "/" },
+        { text: "About Us", link: "/about" },
         { text: "Our Projects", link: "/" },
         { text: "Our Team", link: "/" },
         { text: "Contact Us", link: "/" },
