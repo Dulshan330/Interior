@@ -1,8 +1,10 @@
 import { Box, Typography, Button } from "@mui/material";
 import React from "react";
 import banner from "../../assets/img/MainBanner.png";
-import { balck, mainWidth, themeColor } from "../../config";
-
+import img1 from "../../assets/img/Photo1.jpg";
+import { black, mainWidth, themeColor } from "../../config";
+import { home } from "./homeInfo";
+import WorkBlock from "./workBlock";
 
 function HomePage() {
   return (
@@ -47,7 +49,7 @@ function HomePage() {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: balck,
+                backgroundColor: black,
                 "&:hover": {
                   backgroundColor: themeColor,
                 },
@@ -66,14 +68,42 @@ function HomePage() {
       <Box
         sx={{
           width: mainWidth,
-          height: "50vh",
+          height: "45vh",
           marginY: "2rem",
           marginX: "auto",
-          border: "solid",
-          display:"flex",
-          justifyContent:"space-between",
+          display: "flex",
+          justifyContent: "space-between",
         }}
-      ></Box>
+      >
+        {home.workSection.map((item) => (
+          <WorkBlock
+            title={item.title}
+            contain={item.contain}
+            link={item.link}
+          />
+        ))}
+      </Box>
+      {/* About section */}
+      <Box
+        sx={{
+          width: mainWidth,
+          height: "80vh",
+          marginX: "auto",
+          display: "flex",
+        }}
+      >
+        <Box sx={{ flex: 1 }}></Box>
+        <Box
+          sx={{
+            flex: 1,
+            backgroundImage: `url(${img1})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            borderTopRightRadius:"15rem",
+            borderEndStartRadius:"6rem"
+          }}
+        ></Box>
+      </Box>
     </Box>
   );
 }

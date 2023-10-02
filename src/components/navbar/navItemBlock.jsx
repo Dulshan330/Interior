@@ -1,14 +1,14 @@
 import React,{useState} from "react";
 import { ListItem  } from "@mui/material";
 import { Link } from "react-router-dom";
-import { balck, themeColor } from "../../config";
+import { black, themeColor } from "../../config";
 
 function NavItemBlock(props) {
 
     const {text, link} = props;
     const [hoveredLink, setHoveredLink] = useState(null);
     const linkStyle = {
-        color: balck,
+        color: black,
     };
     const hovering = (linkName) => {
         setHoveredLink(linkName);
