@@ -2,7 +2,8 @@ import { Box, Typography, Button } from "@mui/material";
 import React from "react";
 import banner from "../../assets/img/MainBanner.png";
 import img1 from "../../assets/img/Photo1.jpg";
-import { black, mainWidth, themeColor } from "../../config";
+import callicon from "../../assets/img/Call Icon.png";
+import { black, mainWidth, themeColor, themeColor2 } from "../../config";
 import { home } from "./homeInfo";
 import WorkBlock from "./workBlock";
 
@@ -59,7 +60,7 @@ function HomePage() {
                 borderRadius: "20px",
               }}
             >
-              Get Started
+              Get Started &rarr;
             </Button>
           </Box>
         </Box>
@@ -92,18 +93,73 @@ function HomePage() {
           display: "flex",
         }}
       >
-        <Box sx={{ flex: 1 }}></Box>
+        <Box sx={{ flex: 1, display: "flex", alignItems: "center" }}>
+          <Box sx={{ marginRight: "4rem" }}>
+            <Typography
+              variant="h3"
+              color="initial"
+              fontFamily={"DM Serif Display"}
+              sx={{ marginY: "2rem" }}
+            >
+              We Create The Art Of Stylish Living Stylishly
+            </Typography>
+            <Typography
+              variant="body1"
+              color="initial"
+              fontFamily={"roboto,sans-serif"}
+              sx={{ marginY: "2rem" }}
+            >
+              It is a long established fact that a reader will be distracted by
+              the of readable content of a page when lookings at its layouts the
+              points of using that it has a more-or-less normal.
+            </Typography>
+            <Box
+              sx={{ display: "flex", alignItems: "center", marginY: "2rem" }}
+            >
+              <img src={callicon} alt="call" width={"80px"} height={"auto"} />
+              <Box sx={{ marginX: "1rem" }}>
+                <Typography
+                  variant="body1"
+                  color="initial"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  012345678
+                </Typography>
+                <Typography variant="body1" color="initial">
+                  Call Us Anytime
+                </Typography>
+              </Box>
+            </Box>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: black,
+                "&:hover": {
+                  backgroundColor: themeColor,
+                },
+                marginY: "2rem",
+                paddingY: "1rem",
+                paddingX: "2rem",
+                borderRadius: "20px",
+              }}
+            >
+              Get Free Estimate  &rarr;
+            </Button>
+          </Box>
+        </Box>
         <Box
           sx={{
             flex: 1,
             backgroundImage: `url(${img1})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
-            borderTopRightRadius:"15rem",
-            borderEndStartRadius:"6rem"
+            borderTopRightRadius: "15rem",
+            borderEndStartRadius: "6rem",
           }}
         ></Box>
       </Box>
+      {/* Customer feedback section*/}
+      <Box sx={{width:mainWidth,marginX:"auto",marginY:"2rem", backgroundColor:themeColor2 ,borderRadius:"5rem" ,height:"50vh"}}></Box>
     </Box>
   );
 }
