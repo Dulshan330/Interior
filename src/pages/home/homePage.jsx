@@ -6,6 +6,8 @@ import callicon from "../../assets/img/Call Icon.png";
 import { black, mainWidth, themeColor, themeColor2 } from "../../config";
 import { home } from "./homeInfo";
 import WorkBlock from "./workBlock";
+import FeedbackBlock from "./feedbackBlock";
+import BrandBlock from "./brandBlock";
 
 function HomePage() {
   return (
@@ -143,7 +145,7 @@ function HomePage() {
                 borderRadius: "20px",
               }}
             >
-              Get Free Estimate  &rarr;
+              Get Free Estimate &rarr;
             </Button>
           </Box>
         </Box>
@@ -159,7 +161,50 @@ function HomePage() {
         ></Box>
       </Box>
       {/* Customer feedback section*/}
-      <Box sx={{width:mainWidth,marginX:"auto",marginY:"2rem", backgroundColor:themeColor2 ,borderRadius:"5rem" ,height:"50vh"}}></Box>
+      <Box
+        sx={{
+          width: mainWidth,
+          marginX: "auto",
+          marginY: "6rem",
+          padding: "2rem 1rem",
+          backgroundColor: themeColor2,
+          borderRadius: "5rem",
+        }}
+      >
+        <Typography
+          variant="h3"
+          color="initial"
+          fontFamily={"DM Serif Display"}
+          sx={{ textAlign: "center", marginY: "2rem" }}
+        >
+          What the People Thinks <br /> About Us
+        </Typography>
+        <Box sx={{ display: "flex" }}>
+          {home.FeedbackSection.map((item) => (
+            <FeedbackBlock
+              img={item.img}
+              name={item.name}
+              discription={item.discription}
+              address={item.address}
+            />
+          ))}
+        </Box>
+      </Box>
+      {/* Brand Section */}
+      <Box
+        sx={{
+          width: mainWidth,
+          marginX: "auto",
+          marginY: "5rem",
+          display:"flex",
+          padding: "2rem 1rem",
+          justifyContent:"space-evenly",
+        }}
+      >
+        {home.BrandSection.map((item) => (
+          <BrandBlock img={item.img} />
+        ))}
+      </Box>
     </Box>
   );
 }
