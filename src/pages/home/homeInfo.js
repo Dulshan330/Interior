@@ -6,6 +6,13 @@ import brand2 from "../../assets/img/Brand/02.jpg";
 import brand3 from "../../assets/img/Brand/03.jpg";
 import brand4 from "../../assets/img/Brand/04.jpg";
 import brand5 from "../../assets/img/Brand/05.jpg";
+import project1 from "../../assets/img/Projects/Photo-1.png";
+import project2 from "../../assets/img/Projects/Photo-2.png";
+import project3 from "../../assets/img/Projects/Photo-3.png";
+import project4 from "../../assets/img/Projects/Photo.png";
+import article1 from "../../assets/img/Articles/Photo-1.png";
+import article2 from "../../assets/img/Articles/Photo-2.png";
+import article3 from "../../assets/img/Articles/Photo.png";
 
 export const home = {
     workSection: [
@@ -57,5 +64,60 @@ export const home = {
         { img: brand3 },
         { img: brand4 },
         { img: brand5 },
+    ],
+    ProjectSection: [
+        {
+        img: project1,
+        name: "Modern Kitchan",
+        catogery: "Decor / Artchitecture",
+        link: null,
+        },
+        {
+        img: project2,
+        name: "Modern Kitchan",
+        catogery: "Decor / Artchitecture",
+        link: null,
+        },
+        {
+        img: project3,
+        name: "Modern Kitchan",
+        catogery: "Decor / Artchitecture",
+        link: null,
+        },
+        {
+        img: project4,
+        name: "Modern Kitchan",
+        catogery: "Decor / Artchitecture",
+        link: null,
+        },
+    ],
+    CounterSection: [
+        { name: "Years Of Experience", count: 12 },
+        { name: "Success Project", count: 85 },
+        { name: "Active Project", count: 15 },
+        { name: "Happy Customers", count: 95 },
+    ],
+    ArticleSection: [
+        {
+        img: article1,
+        title: "Let’s Get Solution For Building Construction Work",
+        date: "26 December,2022",
+        link: null,
+        catogery: "Kitchen Design",
+        },
+        {
+        img: article2,
+        title: "Low Cost Latest Invented Interior Designing Ideas.",
+        date: "22 December,2022",
+        link: null,
+        catogery: "Living Design",
+        },
+        {
+        img: article3,
+        title: "Best For Any Office & Business Interior Solution",
+        date: "25 December,2022",
+        link: null,
+        catogery: "Interior Design",
+        },
     ],
 };

@@ -6,60 +6,97 @@ import FooterLinkBloack from "./footerLinkBlock";
 import { mainWidth } from "../../config";
 
 function Footer() {
-    const flexboxstyle = { padding: "1.5rem",flex: 1 };
+    const flexboxstyle = { padding: "1.5rem", flex: 1 };
 
     return (
+        <Box>
         <Box sx={{ fontFamily: "roboto,sans-serif" }}>
-        <Box
+            <Box
             sx={{
-            margin: "auto",
-            width: mainWidth,
-            display: "flex",
-            justifyContent: "space-between",
+                margin: "auto",
+                width: mainWidth,
+                display: "flex",
+                justifyContent: "space-between",
             }}
-        >
+            >
             <Box sx={flexboxstyle}>
-            <img
+                <img
                 src={logo}
                 alt="Logo"
                 style={{ width: "auto", height: "40px" }}
-            />
-            <br />
-            <Typography variant="body1" color="initial">
+                />
+                <br />
+                <Typography variant="body1" color="initial">
                 {footer.description}
-            </Typography>
+                </Typography>
             </Box>
 
             <Box sx={flexboxstyle}>
-            <Typography variant="h6" color="initial">
+                <Typography variant="h6" color="initial">
                 {footer.pagesTitle}
-            </Typography>
-            <List>
+                </Typography>
+                <List>
                 {footer.pages.map((item) => (
-                <FooterLinkBloack text={item.text} link={item.link} />
+                    <FooterLinkBloack text={item.text} link={item.link} />
                 ))}
-            </List>
+                </List>
             </Box>
 
             <Box sx={flexboxstyle}>
-            <Typography variant="h6" color="initial">
+                <Typography variant="h6" color="initial">
                 {footer.servicesTitle}
-            </Typography>
-            <List>
+                </Typography>
+                <List>
                 {footer.services.map((item) => (
-                <FooterLinkBloack text={item.text} link={item.link} />
+                    <FooterLinkBloack text={item.text} link={item.link} />
                 ))}
-            </List>
+                </List>
             </Box>
 
             <Box sx={flexboxstyle}>
-            <Typography variant="h6" color="initial">
+                <Typography variant="h6" color="initial">
                 {footer.contactTitle}
-            </Typography>
-            <Typography variant="body1" color="initial" sx={{marginY:"0.5rem"}}>{footer.address}</Typography>
-            <Typography variant="body1" color="initial" sx={{marginY:"0.5rem"}}>{footer.mail}</Typography>
-            <Typography variant="body1" color="initial" sx={{marginY:"0.5rem"}}>{footer.phone}</Typography>
+                </Typography>
+                <Typography
+                variant="body1"
+                color="initial"
+                sx={{ marginY: "0.5rem" }}
+                >
+                {footer.address}
+                </Typography>
+                <Typography
+                variant="body1"
+                color="initial"
+                sx={{ marginY: "0.5rem" }}
+                >
+                {footer.mail}
+                </Typography>
+                <Typography
+                variant="body1"
+                color="initial"
+                sx={{ marginY: "0.5rem" }}
+                >
+                {footer.phone}
+                </Typography>
             </Box>
+            </Box>
+        </Box>
+        <Box
+            sx={{
+            marginX: "auto",
+            paddingY: "2rem",
+            borderTop: "solid .5px #B0B0B0",
+            }}
+        >
+            <Typography
+            variant="body1"
+            color="initial"
+            textAlign={"center"}
+            sx={{}}
+            >
+            Copyright © Interno | Designed by Victorflow Templates - Powered by
+            Webflow
+            </Typography>
         </Box>
         </Box>
     );

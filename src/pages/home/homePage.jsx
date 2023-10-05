@@ -1,13 +1,16 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Grid } from "@mui/material";
 import React from "react";
 import banner from "../../assets/img/MainBanner.png";
 import img1 from "../../assets/img/Photo1.jpg";
 import callicon from "../../assets/img/Call Icon.png";
-import { black, mainWidth, themeColor, themeColor2 } from "../../config";
+import { black, mainWidth, themeColor, themeColor2, white } from "../../config";
 import { home } from "./homeInfo";
 import WorkBlock from "./workBlock";
 import FeedbackBlock from "./feedbackBlock";
 import BrandBlock from "./brandBlock";
+import ProjectBlock from "./projectBlock";
+import CounterBlock from "./counterBlock";
+import ArticleBlock from "./articleBlock";
 
 function HomePage() {
   return (
@@ -196,14 +199,158 @@ function HomePage() {
           width: mainWidth,
           marginX: "auto",
           marginY: "5rem",
-          display:"flex",
+          display: "flex",
           padding: "2rem 1rem",
-          justifyContent:"space-evenly",
+          justifyContent: "space-evenly",
         }}
       >
         {home.BrandSection.map((item) => (
           <BrandBlock img={item.img} />
         ))}
+      </Box>
+      {/* Project Section */}
+      <Box
+        sx={{
+          width: mainWidth,
+          marginX: "auto",
+          marginY: "5rem",
+        }}
+      >
+        <Typography
+          variant="h3"
+          color="initial"
+          fontFamily={"DM Serif Display"}
+          sx={{ textAlign: "center" }}
+        >
+          Follow Our Projects
+        </Typography>
+        <Box sx={{ width: "50vw", marginX: "auto" }}>
+          <Typography
+            variant="body1"
+            color="initial"
+            fontFamily={"roboto,sans-serif"}
+            sx={{ textAlign: "center", marginY: "1rem" }}
+          >
+            It is a long established fact that a reader will be distracted by
+            the of readable content of page lookings at its layouts points.
+          </Typography>
+        </Box>
+
+        <Grid
+          container
+          display={"flex"}
+          justifyContent={"space-evenly"}
+          alignItems={"center"}
+        >
+          {home.ProjectSection.map((item, index) => (
+            <Grid item xs={12} md={6} key={index}>
+              <ProjectBlock
+                img={item.img}
+                name={item.name}
+                catogery={item.catogery}
+                link={item.link}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      {/* counter Section */}
+      <Box sx={{ backgroundColor: themeColor2 }}>
+        <Box
+          sx={{
+            width: mainWidth,
+            marginX: "auto",
+            marginY: "5rem",
+            paddingY: "6rem",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
+          {home.CounterSection.map((item) => (
+            <CounterBlock name={item.name} count={item.count} />
+          ))}
+        </Box>
+      </Box>
+      {/* Article Section */}
+      <Box sx={{ width: mainWidth, marginX: "auto", marginY: "5rem" }}>
+        <Typography
+          variant="h3"
+          color="initial"
+          fontFamily={"DM Serif Display"}
+          sx={{ textAlign: "center" }}
+        >
+          Articles & News
+        </Typography>
+        <Box sx={{ width: "50vw", marginX: "auto" }}>
+          <Typography
+            variant="body1"
+            color="initial"
+            fontFamily={"roboto,sans-serif"}
+            sx={{ textAlign: "center", marginY: "1rem" }}
+          >
+            It is a long established fact that a reader will be distracted by
+            the of readable content of a page when lookings at its layouts the
+            points of using.
+          </Typography>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          {home.ArticleSection.map((item) => (
+            <ArticleBlock
+              img={item.img}
+              title={item.title}
+              date={item.date}
+              link={item.link}
+              catogery={item.catogery}
+            />
+          ))}
+        </Box>
+      </Box>
+      {/* Contact Section */}
+      <Box
+        sx={{
+          width: mainWidth,
+          marginX: "auto",
+          marginY: "5rem",
+          backgroundColor: black,
+          borderRadius: "2rem",
+          paddingY:"5rem"
+        }}
+      >
+        <Typography
+          variant="h3"
+          color={white}
+          textAlign={"center"}
+          fontFamily={"DM Serif Display"}
+          sx={{ marginY: "1rem" }}
+        >
+          Wanna join the interno?
+        </Typography>
+        <Typography
+          variant="body1"
+          color={white}
+          textAlign={"center"}
+          fontFamily={"roboto,sans-serif"}
+          sx={{ marginY: "1rem" }}
+        >
+          It is a long established fact will be distracted.
+        </Typography>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: themeColor,
+            "&:hover": {
+              backgroundColor: themeColor2,
+              color:black,
+            },
+            display:"block",
+            marginY: "1rem",
+            marginX: "auto",
+            paddingY: "1rem",
+            paddingX: "2rem",
+            borderRadius: "20px",
+          }}
+        >Contact With Us &rarr;</Button>
       </Box>
     </Box>
   );
