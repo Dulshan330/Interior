@@ -5,6 +5,7 @@ import whatwedo from "../../assets/img/AboutPage/Photo-1.jpg";
 import theresult from "../../assets/img/AboutPage/Photo.jpg";
 import { mainWidth, themeColor2, white, themeColor, black } from "../../config";
 import { about } from "./aboutInfo";
+import PeopleBlock from "./peopleBlock";
 
 function AboutusPage() {
     return (
@@ -218,8 +219,16 @@ function AboutusPage() {
             >
                 What the People Thinks About Us
             </Typography>
-            <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
-                {/* do updates ********************************************************************************************************/}
+            <Box sx={{ display: "flex", justifyContent: "space-evenly", marginY:"2rem" }}>
+                {about.AboutUsSection.map((item) => (
+                <PeopleBlock
+                    img={item.img}
+                    name={item.name}
+                    address={item.address}
+                    tel={item.tel}
+                    mail={item.mail}
+                />
+                ))}
             </Box>
             </Box>
         </Box>
@@ -243,7 +252,7 @@ function AboutusPage() {
                 flexDirection: "column",
             }}
             >
-            <Box sx={{ display: "flex", justifyContent: "center" , }}>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <TextField
                 id="standard-basic"
                 label="Name"
@@ -271,23 +280,23 @@ function AboutusPage() {
                 multiline
                 rows={6}
             />
-            
             </Box>
             <Button
-                variant="contained"
-                sx={{
+            variant="contained"
+            sx={{
                 backgroundColor: black,
                 "&:hover": {
-                    backgroundColor: themeColor,
+                backgroundColor: themeColor,
                 },
-                display:"block",
-                marginY: "1rem",marginX: "auto",
+                display: "block",
+                marginY: "1rem",
+                marginX: "auto",
                 paddingY: "1rem",
                 paddingX: "2rem",
                 borderRadius: "20px",
-                }}
+            }}
             >
-                Send Now &rarr;
+            Send Now &rarr;
             </Button>
         </Box>
         </Box>

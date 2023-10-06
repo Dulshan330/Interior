@@ -1,7 +1,7 @@
-import person1 from "../../assets/img/AboutPage/people (1).jpg";
-import person2 from "../../assets/img/AboutPage/people (2).jpg";
-import person3 from "../../assets/img/AboutPage/people (3).jpg";
-import person4 from "../../assets/img/AboutPage/people (4).jpg";
+import person1 from "../../assets/img/AboutPage/people1.jpg";
+import person2 from "../../assets/img/AboutPage/people2.jpg";
+import person3 from "../../assets/img/AboutPage/people3.jpg";
+import person4 from "../../assets/img/AboutPage/people4.jpg";
 
 export const about = {
     AboutUsSection: [
