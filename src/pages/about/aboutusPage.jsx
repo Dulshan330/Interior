@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, TextField } from "@mui/material";
 import React from "react";
 import banner from "../../assets/img/AboutBanner.png";
 import whatwedo from "../../assets/img/AboutPage/Photo-1.jpg";
@@ -171,7 +171,7 @@ function AboutusPage() {
                 fontFamily={"DM Serif Display"}
                 sx={{ marginY: "1rem" }}
             >
-                What We Do
+                The End Result
             </Typography>
             <Typography variant="body1" color="initial" sx={{ marginY: "1rem" }}>
                 It is a long established fact that a reader will be distracted by
@@ -191,7 +191,7 @@ function AboutusPage() {
                 borderRadius: "20px",
                 }}
             >
-                Our concept &rarr;
+                Our Portfolio &rarr;
             </Button>
             </Box>
         </Box>
@@ -206,7 +206,7 @@ function AboutusPage() {
                 width: mainWidth,
                 marginX: "auto",
                 marginY: "5rem",
-                paddingY:"5rem"
+                paddingY: "5rem",
             }}
             >
             <Typography
@@ -214,13 +214,81 @@ function AboutusPage() {
                 color="initial"
                 fontFamily={"DM Serif Display"}
                 textAlign={"center"}
+                sx={{ width: "400px", textAlign: "center", margin: "auto" }}
             >
                 What the People Thinks About Us
             </Typography>
-            <Box sx={{display:'flex',justifyContent:"space-evenly"}}>
-                {/* do updates */}
+            <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+                {/* do updates ********************************************************************************************************/}
             </Box>
             </Box>
+        </Box>
+        {/* Forum Section */}
+        <Box sx={{ width: mainWidth, marginX: "auto", marginY: "5rem" }}>
+            <Typography
+            variant="h4"
+            color="initial"
+            fontFamily={"DM Serif Display"}
+            textAlign={"center"}
+            sx={{ width: "500px", textAlign: "center", margin: "1rem auto" }}
+            >
+            Creative project? Let's have a productive talk.
+            </Typography>
+            <Box
+            sx={{
+                width: "800px",
+                margin: "auto",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+            }}
+            >
+            <Box sx={{ display: "flex", justifyContent: "center" , }}>
+                <TextField
+                id="standard-basic"
+                label="Name"
+                variant="standard"
+                value={null}
+                onChange={null}
+                sx={{ flex: 1, margin: "1rem" }}
+                />
+                <TextField
+                id="standard-basic"
+                label="Email"
+                variant="standard"
+                value={null}
+                onChange={null}
+                sx={{ flex: 1, margin: "1rem" }}
+                />
+            </Box>
+            <TextField
+                id="standard-basic"
+                label="Message"
+                variant="standard"
+                value={null}
+                onChange={null}
+                sx={{ flex: 1, margin: "1rem" }}
+                multiline
+                rows={6}
+            />
+            
+            </Box>
+            <Button
+                variant="contained"
+                sx={{
+                backgroundColor: black,
+                "&:hover": {
+                    backgroundColor: themeColor,
+                },
+                display:"block",
+                marginY: "1rem",marginX: "auto",
+                paddingY: "1rem",
+                paddingX: "2rem",
+                borderRadius: "20px",
+                }}
+            >
+                Send Now &rarr;
+            </Button>
         </Box>
         </Box>
     );
