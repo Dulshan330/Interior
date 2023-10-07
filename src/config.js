@@ -1,5 +1,12 @@
+import { useMediaQuery } from "@mui/material";
+
 // config.js
-export const mainWidth = "1300px";
+export const mainWidth = "1280px";
+
+// Responsive Settings
+export const desktopView = "(min-width: 1280px)";
+export const mobileViewMax = "(max-width: 1280px)";
+export const mobileViewMin = "(min-width: 375px)";
 
 // color pallete
 export const themeColor = "#CDA274";

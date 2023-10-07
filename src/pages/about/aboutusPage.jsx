@@ -1,304 +1,340 @@
-import { Box, Typography, Button, TextField } from "@mui/material";
+import {
+    Box,
+    Typography,
+    Button,
+    TextField,
+    useMediaQuery,
+} from "@mui/material";
 import React from "react";
 import banner from "../../assets/img/AboutBanner.jpg";
 import whatwedo from "../../assets/img/AboutPage/Photo-1.jpg";
 import theresult from "../../assets/img/AboutPage/Photo.jpg";
-import { mainWidth, themeColor2, white, themeColor, black } from "../../config";
+import { mainWidth, themeColor2, white, themeColor, black, desktopView, mobileViewMax, mobileViewMin } from "../../config";
 import { about } from "./aboutInfo";
 import PeopleBlock from "./peopleBlock";
 
 function AboutusPage() {
+
+    // Responsive settings
+    const desktopScreen = useMediaQuery(desktopView);
+    const mobilePhoneScreenMax = useMediaQuery(mobileViewMax);
+    const mobilePhoneScreenMin = useMediaQuery(mobileViewMin);
+    const mobilePhoneScreen = mobilePhoneScreenMax && mobilePhoneScreenMin;
+
     return (
         <Box>
-        {/* Banner Section */}
-        <Box
-            sx={{
-            background: `url(${banner})`,
-            height: "40vh",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            display: "flex",
-            }}
-        >
+        {/* For Desktops */}
+        {desktopScreen && (
+            <Box>
+            {/* Banner Section */}
             <Box
-            sx={{
-                width: mainWidth,
-                marginX: "auto",
+                sx={{
+                background: `url(${banner})`,
+                height: "40vh",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
                 display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
-                alignItems: "center",
-            }}
-            >
-            <Box
-                sx={{
-                backgroundColor: white,
-                padding: "3rem 9rem",
-                borderTopLeftRadius: "2rem",
-                borderTopRightRadius: "2rem",
                 }}
             >
-                <Typography
-                variant="h3"
-                color="initial"
-                fontFamily={"DM Serif Display"}
+                <Box
+                sx={{
+                    width: mainWidth,
+                    marginX: "auto",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-end",
+                    alignItems: "center",
+                }}
                 >
-                About Us
-                </Typography>
-                <Typography variant="body1" color="initial" textAlign={"center"}>
-                Home / About Us
-                </Typography>
+                <Box
+                    sx={{
+                    backgroundColor: white,
+                    padding: "3rem 9rem",
+                    borderTopLeftRadius: "2rem",
+                    borderTopRightRadius: "2rem",
+                    }}
+                >
+                    <Typography
+                    variant="h3"
+                    color="initial"
+                    fontFamily={"DM Serif Display"}
+                    >
+                    About Us
+                    </Typography>
+                    <Typography
+                    variant="body1"
+                    color="initial"
+                    textAlign={"center"}
+                    >
+                    Home / About Us
+                    </Typography>
+                </Box>
+                </Box>
             </Box>
-            </Box>
-        </Box>
-        {/* Quotes Section */}
-        <Box
-            sx={{
-            width: mainWidth,
-            marginX: "auto",
-            marginY: "5rem",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            }}
-        >
+            {/* Quotes Section */}
             <Box
-            sx={{
-                border: `solid 9px ${themeColor2}`,
-                padding: "3rem 5rem",
-                borderRadius: "3rem",
-                width: "35vw",
-            }}
-            >
-            <Typography
-                variant="h2"
-                color="initial"
-                fontFamily={"DM Serif Display"}
-                textAlign={"center"}
-            >
-                “
-            </Typography>
-            <Typography
-                variant="h6"
-                color="initial"
-                fontFamily={"DM Serif Display"}
-                textAlign={"center"}
-                sx={{ fontStyle: "italic" }}
-            >
-                I like an interior that defies labeling. I don't really want someone
-                to walk into a room and know that I did it
-            </Typography>
-            <Typography
-                variant="body1"
-                color="initial"
-                textAlign={"center"}
-                sx={{ marginY: "1.5rem" }}
-            >
-                -BUNNY WILLIAMS-
-            </Typography>
-            </Box>
-        </Box>
-        {/* What we do Section */}
-        <Box
-            sx={{
-            width: mainWidth,
-            marginX: "auto",
-            marginY: "5rem",
-            display: "flex",
-            }}
-        >
-            <Box sx={{ flex: 1, paddingY: "3rem", paddingRight: "3rem" }}>
-            <Typography
-                variant="h4"
-                color="initial"
-                fontFamily={"DM Serif Display"}
-                sx={{ marginY: "1rem" }}
-            >
-                What We Do
-            </Typography>
-            <Typography variant="body1" color="initial" sx={{ marginY: "1rem" }}>
-                It is a long established fact that a reader will be distracted by
-                the of readable content of a page when lookings at its layouts the
-                points of using that it has a more-or-less normal.
-            </Typography>
-            <Button
-                variant="contained"
                 sx={{
-                backgroundColor: black,
-                "&:hover": {
-                    backgroundColor: themeColor,
-                },
-                marginY: "1rem",
-                paddingY: "1rem",
-                paddingX: "2rem",
-                borderRadius: "20px",
-                }}
-            >
-                Our concept &rarr;
-            </Button>
-            </Box>
-            <Box
-            sx={{
-                flex: 1,
-                backgroundImage: `url(${whatwedo})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                borderRadius: "3rem",
-            }}
-            ></Box>
-        </Box>
-        {/* The Result Section */}
-        <Box
-            sx={{
-            width: mainWidth,
-            marginX: "auto",
-            marginY: "5rem",
-            display: "flex",
-            }}
-        >
-            <Box
-            sx={{
-                flex: 1,
-                backgroundImage: `url(${theresult})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                borderRadius: "3rem",
-            }}
-            ></Box>
-            <Box sx={{ flex: 1, paddingY: "3rem", paddingLeft: "3rem" }}>
-            <Typography
-                variant="h4"
-                color="initial"
-                fontFamily={"DM Serif Display"}
-                sx={{ marginY: "1rem" }}
-            >
-                The End Result
-            </Typography>
-            <Typography variant="body1" color="initial" sx={{ marginY: "1rem" }}>
-                It is a long established fact that a reader will be distracted by
-                the of readable content of a page when lookings at its layouts the
-                points of using that it has a more-or-less normal.
-            </Typography>
-            <Button
-                variant="contained"
-                sx={{
-                backgroundColor: black,
-                "&:hover": {
-                    backgroundColor: themeColor,
-                },
-                marginY: "1rem",
-                paddingY: "1rem",
-                paddingX: "2rem",
-                borderRadius: "20px",
-                }}
-            >
-                Our Portfolio &rarr;
-            </Button>
-            </Box>
-        </Box>
-        {/* About us Section */}
-        <Box
-            sx={{
-            backgroundColor: themeColor2,
-            }}
-        >
-            <Box
-            sx={{
                 width: mainWidth,
                 marginX: "auto",
                 marginY: "5rem",
-                paddingY: "5rem",
-            }}
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                }}
             >
-            <Typography
+                <Box
+                sx={{
+                    border: `solid 9px ${themeColor2}`,
+                    padding: "3rem 5rem",
+                    borderRadius: "3rem",
+                    width: "35vw",
+                }}
+                >
+                <Typography
+                    variant="h2"
+                    color="initial"
+                    fontFamily={"DM Serif Display"}
+                    textAlign={"center"}
+                >
+                    “
+                </Typography>
+                <Typography
+                    variant="h6"
+                    color="initial"
+                    fontFamily={"DM Serif Display"}
+                    textAlign={"center"}
+                    sx={{ fontStyle: "italic" }}
+                >
+                    I like an interior that defies labeling. I don't really want
+                    someone to walk into a room and know that I did it
+                </Typography>
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    textAlign={"center"}
+                    sx={{ marginY: "1.5rem" }}
+                >
+                    -BUNNY WILLIAMS-
+                </Typography>
+                </Box>
+            </Box>
+            {/* What we do Section */}
+            <Box
+                sx={{
+                width: mainWidth,
+                marginX: "auto",
+                marginY: "5rem",
+                display: "flex",
+                }}
+            >
+                <Box sx={{ flex: 1, paddingY: "3rem", paddingRight: "3rem" }}>
+                <Typography
+                    variant="h4"
+                    color="initial"
+                    fontFamily={"DM Serif Display"}
+                    sx={{ marginY: "1rem" }}
+                >
+                    What We Do
+                </Typography>
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ marginY: "1rem" }}
+                >
+                    It is a long established fact that a reader will be distracted
+                    by the of readable content of a page when lookings at its
+                    layouts the points of using that it has a more-or-less normal.
+                </Typography>
+                <Button
+                    variant="contained"
+                    sx={{
+                    backgroundColor: black,
+                    "&:hover": {
+                        backgroundColor: themeColor,
+                    },
+                    marginY: "1rem",
+                    paddingY: "1rem",
+                    paddingX: "2rem",
+                    borderRadius: "20px",
+                    }}
+                >
+                    Our concept &rarr;
+                </Button>
+                </Box>
+                <Box
+                sx={{
+                    flex: 1,
+                    backgroundImage: `url(${whatwedo})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    borderRadius: "3rem",
+                }}
+                ></Box>
+            </Box>
+            {/* The Result Section */}
+            <Box
+                sx={{
+                width: mainWidth,
+                marginX: "auto",
+                marginY: "5rem",
+                display: "flex",
+                }}
+            >
+                <Box
+                sx={{
+                    flex: 1,
+                    backgroundImage: `url(${theresult})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    borderRadius: "3rem",
+                }}
+                ></Box>
+                <Box sx={{ flex: 1, paddingY: "3rem", paddingLeft: "3rem" }}>
+                <Typography
+                    variant="h4"
+                    color="initial"
+                    fontFamily={"DM Serif Display"}
+                    sx={{ marginY: "1rem" }}
+                >
+                    The End Result
+                </Typography>
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ marginY: "1rem" }}
+                >
+                    It is a long established fact that a reader will be distracted
+                    by the of readable content of a page when lookings at its
+                    layouts the points of using that it has a more-or-less normal.
+                </Typography>
+                <Button
+                    variant="contained"
+                    sx={{
+                    backgroundColor: black,
+                    "&:hover": {
+                        backgroundColor: themeColor,
+                    },
+                    marginY: "1rem",
+                    paddingY: "1rem",
+                    paddingX: "2rem",
+                    borderRadius: "20px",
+                    }}
+                >
+                    Our Portfolio &rarr;
+                </Button>
+                </Box>
+            </Box>
+            {/* About us Section */}
+            <Box
+                sx={{
+                backgroundColor: themeColor2,
+                }}
+            >
+                <Box
+                sx={{
+                    width: mainWidth,
+                    marginX: "auto",
+                    marginY: "5rem",
+                    paddingY: "5rem",
+                }}
+                >
+                <Typography
+                    variant="h4"
+                    color="initial"
+                    fontFamily={"DM Serif Display"}
+                    textAlign={"center"}
+                    sx={{ width: "400px", textAlign: "center", margin: "auto" }}
+                >
+                    What the People Thinks About Us
+                </Typography>
+                <Box
+                    sx={{
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    marginY: "2rem",
+                    }}
+                >
+                    {about.AboutUsSection.map((item) => (
+                    <PeopleBlock
+                        img={item.img}
+                        name={item.name}
+                        address={item.address}
+                        tel={item.tel}
+                        mail={item.mail}
+                    />
+                    ))}
+                </Box>
+                </Box>
+            </Box>
+            {/* Forum Section */}
+            <Box sx={{ width: mainWidth, marginX: "auto", marginY: "5rem" }}>
+                <Typography
                 variant="h4"
                 color="initial"
                 fontFamily={"DM Serif Display"}
                 textAlign={"center"}
-                sx={{ width: "400px", textAlign: "center", margin: "auto" }}
-            >
-                What the People Thinks About Us
-            </Typography>
-            <Box sx={{ display: "flex", justifyContent: "space-evenly", marginY:"2rem" }}>
-                {about.AboutUsSection.map((item) => (
-                <PeopleBlock
-                    img={item.img}
-                    name={item.name}
-                    address={item.address}
-                    tel={item.tel}
-                    mail={item.mail}
-                />
-                ))}
-            </Box>
-            </Box>
-        </Box>
-        {/* Forum Section */}
-        <Box sx={{ width: mainWidth, marginX: "auto", marginY: "5rem" }}>
-            <Typography
-            variant="h4"
-            color="initial"
-            fontFamily={"DM Serif Display"}
-            textAlign={"center"}
-            sx={{ width: "500px", textAlign: "center", margin: "1rem auto" }}
-            >
-            Creative project? Let's have a productive talk.
-            </Typography>
-            <Box
-            sx={{
-                width: "800px",
-                margin: "auto",
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-            }}
-            >
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
+                sx={{ width: "500px", textAlign: "center", margin: "1rem auto" }}
+                >
+                Creative project? Let's have a productive talk.
+                </Typography>
+                <Box
+                sx={{
+                    width: "800px",
+                    margin: "auto",
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                }}
+                >
+                <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <TextField
+                    id="standard-basic"
+                    label="Name"
+                    variant="standard"
+                    value={null}
+                    onChange={null}
+                    sx={{ flex: 1, margin: "1rem" }}
+                    />
+                    <TextField
+                    id="standard-basic"
+                    label="Email"
+                    variant="standard"
+                    value={null}
+                    onChange={null}
+                    sx={{ flex: 1, margin: "1rem" }}
+                    />
+                </Box>
                 <TextField
-                id="standard-basic"
-                label="Name"
-                variant="standard"
-                value={null}
-                onChange={null}
-                sx={{ flex: 1, margin: "1rem" }}
+                    id="standard-basic"
+                    label="Message"
+                    variant="standard"
+                    value={null}
+                    onChange={null}
+                    sx={{ flex: 1, margin: "1rem" }}
+                    multiline
+                    rows={6}
                 />
-                <TextField
-                id="standard-basic"
-                label="Email"
-                variant="standard"
-                value={null}
-                onChange={null}
-                sx={{ flex: 1, margin: "1rem" }}
-                />
+                </Box>
+                <Button
+                variant="contained"
+                sx={{
+                    backgroundColor: black,
+                    "&:hover": {
+                    backgroundColor: themeColor,
+                    },
+                    display: "block",
+                    marginY: "1rem",
+                    marginX: "auto",
+                    paddingY: "1rem",
+                    paddingX: "2rem",
+                    borderRadius: "20px",
+                }}
+                >
+                Send Now &rarr;
+                </Button>
             </Box>
-            <TextField
-                id="standard-basic"
-                label="Message"
-                variant="standard"
-                value={null}
-                onChange={null}
-                sx={{ flex: 1, margin: "1rem" }}
-                multiline
-                rows={6}
-            />
             </Box>
-            <Button
-            variant="contained"
-            sx={{
-                backgroundColor: black,
-                "&:hover": {
-                backgroundColor: themeColor,
-                },
-                display: "block",
-                marginY: "1rem",
-                marginX: "auto",
-                paddingY: "1rem",
-                paddingX: "2rem",
-                borderRadius: "20px",
-            }}
-            >
-            Send Now &rarr;
-            </Button>
-        </Box>
+        )}
         </Box>
     );
 }
