@@ -1,6 +1,6 @@
 import { Box, Typography, Button, Grid } from "@mui/material";
 import React from "react";
-import banner from "../../assets/img/MainBanner.png";
+import banner from "../../assets/img/MainBanner.jpg";
 import img1 from "../../assets/img/Photo1.jpg";
 import callicon from "../../assets/img/Call Icon.png";
 import { black, mainWidth, themeColor, themeColor2, white } from "../../config";

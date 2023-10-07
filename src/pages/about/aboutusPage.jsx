@@ -1,6 +1,6 @@
 import { Box, Typography, Button, TextField } from "@mui/material";
 import React from "react";
-import banner from "../../assets/img/AboutBanner.png";
+import banner from "../../assets/img/AboutBanner.jpg";
 import whatwedo from "../../assets/img/AboutPage/Photo-1.jpg";
 import theresult from "../../assets/img/AboutPage/Photo.jpg";
 import { mainWidth, themeColor2, white, themeColor, black } from "../../config";
