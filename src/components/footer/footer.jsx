@@ -17,7 +17,7 @@ function Footer() {
 
     return (
         <Box>
-        {/* For Desktops */}
+        {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
             <Box>
             <Box sx={{ fontFamily: font }}>
@@ -111,7 +111,7 @@ function Footer() {
             </Box>
         )}
 
-        {/* For mobile phones */}
+        {/* ----------------- For mobile phones ----------------- */}
         {mobilePhoneScreen && (
             <Box>
             <Box sx={{ fontFamily: font }}>

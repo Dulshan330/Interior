@@ -23,7 +23,7 @@ function AboutusPage() {
 
     return (
         <Box>
-        {/* For Desktops */}
+        {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
             <Box>
             {/* Banner Section */}

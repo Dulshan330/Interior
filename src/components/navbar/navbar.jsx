@@ -48,7 +48,7 @@ function NavBar() {
 
     return (
         <Box>
-        {/* For Desktops */}
+        {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
             <Box
             sx={{
@@ -79,7 +79,7 @@ function NavBar() {
             </Box>
         )}
 
-        {/* For Mobile Phones */}
+        {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
             <Box>
             <Box

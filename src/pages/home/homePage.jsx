@@ -33,7 +33,7 @@ function HomePage() {
 
   return (
     <Box>
-      {/* For Desktops */}
+      {/* ----------------- For Desktops ----------------- */}
       {desktopScreen && (
         <Box>
           {/* Hero section  */}
@@ -384,6 +384,157 @@ function HomePage() {
             >
               Contact With Us &rarr;
             </Button>
+          </Box>
+        </Box>
+      )}
+
+      {/* ----------------- For Mobile Phones ----------------- */}
+      {mobilePhoneScreen && (
+        <Box>
+          {/* Hero section  */}
+          <Box
+            sx={{
+              backgroundImage: `url(${banner})`,
+              height: "100vh",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              borderEndStartRadius: "8rem",
+            }}
+          >
+            <Box
+              sx={{
+                margin: "auto",
+              }}
+            >
+              <Box sx={{ width: "80vw" }}>
+                <Typography
+                  variant="h4"
+                  fontFamily={font2}
+                  color="initial"
+                  sx={{ marginY: "1rem" }}
+                >
+                  Let Your Home Be Unique
+                </Typography>
+                <Typography
+                  variant="body1"
+                  fontFamily={font}
+                  color="initial"
+                  sx={{ marginY: "1rem" }}
+                >
+                  There are many variations of the passages of lorem Ipsum
+                  fromavailable,variations of the passages.
+                </Typography>
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: black,
+                    "&:hover": {
+                      backgroundColor: themeColor,
+                    },
+                    marginY: "1rem",
+                    paddingY: "1rem",
+                    paddingX: "2rem",
+                    borderRadius: "20px",
+                  }}
+                >
+                  Get Started &rarr;
+                </Button>
+              </Box>
+            </Box>
+          </Box>
+          {/* Work section */}
+          <Box
+            sx={{
+              height: "auto",
+              marginY: "2rem",
+              marginX: "auto",
+              display: "flex",
+              flexDirection:"column",
+              justifyContent: "center",
+            }}
+          >
+            {home.workSection.map((item) => (
+              <WorkBlock
+                title={item.title}
+                contain={item.contain}
+                link={item.link}
+              />
+            ))}
+          </Box>
+          {/* About section */}
+          <Box
+            sx={{
+              height: "auto",
+              marginX: "1rem",
+              display: "flex", 
+            }}
+          >
+            <Box sx={{ display: "flex", alignItems: "center"}}>
+              <Box>
+                <Typography
+                  variant="h4"
+                  color="initial"
+                  fontFamily={font2}
+                  sx={{ marginY: "2rem" }}
+                >
+                  We Create The Art Of Stylish Living Stylishly
+                </Typography>
+                <Typography
+                  variant="body1"
+                  color="initial"
+                  fontFamily={font}
+                  sx={{ marginY: "2rem" }}
+                >
+                  It is a long established fact that a reader will be distracted
+                  by the of readable content of a page when lookings at its
+                  layouts the points of using that it has a more-or-less normal.
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginY: "2rem",
+                  }}
+                >
+                  <img
+                    src={callicon}
+                    alt="call"
+                    width={"80px"}
+                    height={"auto"}
+                  />
+                  <Box sx={{ marginX: "1rem" }}>
+                    <Typography
+                      variant="body1"
+                      color="initial"
+                      sx={{ fontWeight: "bold" }}
+                    >
+                      012345678
+                    </Typography>
+                    <Typography variant="body1" color="initial">
+                      Call Us Anytime
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: black,
+                    "&:hover": {
+                      backgroundColor: themeColor,
+                    },
+                    marginY: "2rem",
+                    paddingY: "1rem",
+                    paddingX: "2rem",
+                    borderRadius: "20px",
+                  }}
+                >
+                  Get Free Estimate &rarr;
+                </Button>
+              </Box>
+            </Box>
           </Box>
         </Box>
       )}
