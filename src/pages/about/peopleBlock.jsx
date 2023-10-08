@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography,  } from "@mui/material";
 import React, { useState } from "react";
 import fb from "../../assets/img/AboutPage/fb.png";
 import inster from "../../assets/img/AboutPage/instergram.png";

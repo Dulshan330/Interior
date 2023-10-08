@@ -5,7 +5,7 @@ import arrow from "../../assets/img/arrowIcon.png";
 import { font, font2 } from "../../config";
 
 function ProjectBlock(props) {
-    const { img, link, catogery, name } = props;
+    const { img, link, catogery, name, width } = props;
 
     return (
         <Box
@@ -22,7 +22,7 @@ function ProjectBlock(props) {
             src={img}
             alt="project"
             style={{
-                width: "25vw",
+                width: width,
                 borderTopLeftRadius: "4rem",
                 borderEndEndRadius: "4rem",
             }}

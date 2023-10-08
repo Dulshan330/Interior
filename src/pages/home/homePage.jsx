@@ -24,7 +24,6 @@ import CounterBlock from "./counterBlock";
 import ArticleBlock from "./articleBlock";
 
 function HomePage() {
-
   // Responsive settings
   const desktopScreen = useMediaQuery(desktopView);
   const mobilePhoneScreenMax = useMediaQuery(mobileViewMax);
@@ -235,7 +234,7 @@ function HomePage() {
             }}
           >
             {home.BrandSection.map((item) => (
-              <BrandBlock img={item.img} />
+              <BrandBlock img={item.img} height={"50px"} width={"auto"} />
             ))}
           </Box>
           {/* Project Section */}
@@ -280,6 +279,7 @@ function HomePage() {
                     name={item.name}
                     catogery={item.catogery}
                     link={item.link}
+                    width={"30vw"}
                   />
                 </Grid>
               ))}
@@ -452,7 +452,7 @@ function HomePage() {
               marginY: "2rem",
               marginX: "auto",
               display: "flex",
-              flexDirection:"column",
+              flexDirection: "column",
               justifyContent: "center",
             }}
           >
@@ -469,10 +469,10 @@ function HomePage() {
             sx={{
               height: "auto",
               marginX: "1rem",
-              display: "flex", 
+              display: "flex",
             }}
           >
-            <Box sx={{ display: "flex", alignItems: "center"}}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box>
                 <Typography
                   variant="h4"
@@ -535,6 +535,204 @@ function HomePage() {
                 </Button>
               </Box>
             </Box>
+          </Box>
+          {/* Customer feedback section*/}
+          <Box
+            sx={{
+              marginX: "1rem",
+              marginY: "6rem",
+              padding: "2rem 1rem",
+              backgroundColor: themeColor2,
+              borderRadius: "5rem",
+            }}
+          >
+            <Typography
+              variant="h4"
+              color="initial"
+              fontFamily={font2}
+              sx={{ textAlign: "center", marginY: "2rem" }}
+            >
+              What the People Thinks <br /> About Us
+            </Typography>
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              {home.FeedbackSection.map((item) => (
+                <FeedbackBlock
+                  img={item.img}
+                  name={item.name}
+                  discription={item.discription}
+                  address={item.address}
+                />
+              ))}
+            </Box>
+          </Box>
+          {/* Brand Section */}
+          <Box
+            sx={{
+              height: "80vh",
+              marginX: "1rem",
+              marginY: "5rem",
+              display: "flex",
+              padding: "2rem 1rem",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            {home.BrandSection.map((item) => (
+              <BrandBlock img={item.img} height={"auto"} width={"150px"} />
+            ))}
+          </Box>
+          {/* Project Section */}
+          <Box
+            sx={{
+              marginX: "1rem",
+              marginY: "5rem",
+            }}
+          >
+            <Typography
+              variant="h4"
+              color="initial"
+              fontFamily={font2}
+              sx={{ textAlign: "center" }}
+            >
+              Follow Our Projects
+            </Typography>
+            <Box sx={{ width: "80vw", marginX: "auto" }}>
+              <Typography
+                variant="body1"
+                color="initial"
+                fontFamily={font}
+                sx={{ textAlign: "center", marginY: "1rem" }}
+              >
+                It is a long established fact that a reader will be distracted
+                by the of readable content of page lookings at its layouts
+                points.
+              </Typography>
+            </Box>
+
+            <Grid
+              container
+              display={"flex"}
+              justifyContent={"space-evenly"}
+              alignItems={"center"}
+            >
+              {home.ProjectSection.map((item, index) => (
+                <Grid item xs={12} md={6} key={index}>
+                  <ProjectBlock
+                    img={item.img}
+                    name={item.name}
+                    catogery={item.catogery}
+                    link={item.link}
+                    width={"70vw"}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+          {/* counter Section */}
+          <Box sx={{ backgroundColor: themeColor2 }}>
+            <Box
+              sx={{
+                marginX: "1rem",
+                marginY: "5rem",
+                paddingY: "3rem",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              {home.CounterSection.map((item) => (
+                <CounterBlock name={item.name} count={item.count} />
+              ))}
+            </Box>
+          </Box>
+          {/* Article Section */}
+          <Box sx={{ marginX: "1rem", marginY: "5rem" }}>
+            <Typography
+              variant="h4"
+              color="initial"
+              fontFamily={font2}
+              sx={{ textAlign: "center" }}
+            >
+              Articles & News
+            </Typography>
+            <Box sx={{ width: "50vw", marginX: "auto" }}>
+              <Typography
+                variant="body1"
+                color="initial"
+                fontFamily={font}
+                sx={{ textAlign: "center", marginY: "1rem" }}
+              >
+                It is a long established fact that a reader will be distracted
+                by the of readable content of a page when lookings at its
+                layouts the points of using.
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              {home.ArticleSection.map((item) => (
+                <ArticleBlock
+                  img={item.img}
+                  title={item.title}
+                  date={item.date}
+                  link={item.link}
+                  catogery={item.catogery}
+                />
+              ))}
+            </Box>
+          </Box>
+          {/* Contact Section */}
+          <Box
+            sx={{
+              marginX: "1rem",
+              marginY: "5rem",
+              backgroundColor: black,
+              borderRadius: "2rem",
+              paddingY: "5rem",
+            }}
+          >
+            <Typography
+              variant="h4"
+              color={white}
+              textAlign={"center"}
+              fontFamily={font2}
+              sx={{ marginY: "1rem" }}
+            >
+              Wanna join the interno?
+            </Typography>
+            <Typography
+              variant="body1"
+              color={white}
+              textAlign={"center"}
+              fontFamily={font}
+              sx={{ marginY: "1rem" }}
+            >
+              It is a long established fact will be distracted.
+            </Typography>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: themeColor,
+                "&:hover": {
+                  backgroundColor: themeColor2,
+                  color: black,
+                },
+                display: "block",
+                marginY: "1rem",
+                marginX: "auto",
+                paddingY: "1rem",
+                paddingX: "2rem",
+                borderRadius: "20px",
+              }}
+            >
+              Contact With Us &rarr;
+            </Button>
           </Box>
         </Box>
       )}

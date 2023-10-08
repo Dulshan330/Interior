@@ -335,6 +335,297 @@ function AboutusPage() {
             </Box>
             </Box>
         )}
+
+        {/* ----------------- For Mobile Phones ----------------- */}
+        {mobilePhoneScreen && (
+            <Box>
+            {/* Banner Section */}
+            <Box
+                sx={{
+                background: `url(${banner})`,
+                height: "30vh",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                display: "flex",
+                }}
+            >
+                <Box
+                sx={{
+                    marginX: "auto",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-end",
+                    alignItems: "center",
+                }}
+                >
+                <Box
+                    sx={{
+                    backgroundColor: white,
+                    padding: "2rem 6rem",
+                    borderTopLeftRadius: "2rem",
+                    borderTopRightRadius: "2rem",
+                    }}
+                >
+                    <Typography
+                    variant="h4"
+                    color="initial"
+                    fontFamily={font2}
+                    >
+                    About Us
+                    </Typography>
+                    <Typography
+                    variant="body2"
+                    color="initial"
+                    textAlign={"center"}fontFamily={font}
+                    >
+                    Home / About Us
+                    </Typography>
+                </Box>
+                </Box>
+            </Box>
+            {/* Quotes Section */}
+            <Box
+                sx={{
+                marginX: "1rem",
+                marginY: "4rem",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                }}
+            >
+                <Box
+                sx={{
+                    border: `solid 9px ${themeColor2}`,
+                    padding: "2rem 4rem",
+                    borderRadius: "3rem",
+                    width: "60vw",
+                }}
+                >
+                <Typography
+                    variant="h2"
+                    color="initial"
+                    fontFamily={font2}
+                    textAlign={"center"}
+                >
+                    “
+                </Typography>
+                <Typography
+                    variant="h6"
+                    color="initial"
+                    fontFamily={font2}
+                    textAlign={"center"}
+                    sx={{ fontStyle: "italic" }}
+                >
+                    I like an interior that defies labeling. I don't really want
+                    someone to walk into a room and know that I did it
+                </Typography>
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    textAlign={"center"}
+                    sx={{ marginY: "1.5rem" }} fontFamily={font}
+                >
+                    -BUNNY WILLIAMS-
+                </Typography>
+                </Box>
+            </Box>
+            {/* What we do Section */}
+            <Box
+                sx={{
+                marginX: "1rem",
+                marginY: "1rem",
+                display: "flex",
+                }}
+            >
+                <Box sx={{ flex: 1, paddingY: "2rem", }}>
+                <Typography
+                    variant="h4"
+                    color="initial"
+                    fontFamily={font2}
+                    sx={{ marginY: "1rem" }}
+                >
+                    What We Do
+                </Typography>
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ marginY: "1rem" }} fontFamily={font}
+                >
+                    It is a long established fact that a reader will be distracted
+                    by the of readable content of a page when lookings at its
+                    layouts the points of using that it has a more-or-less normal.
+                </Typography>
+                <Button
+                    variant="contained"
+                    sx={{
+                    backgroundColor: black,
+                    "&:hover": {
+                        backgroundColor: themeColor,
+                    },
+                    marginY: "1rem",
+                    paddingY: "1rem",
+                    paddingX: "2rem",
+                    borderRadius: "20px",
+                    }}
+                >
+                    Our concept &rarr;
+                </Button>
+                </Box>
+            </Box>
+            {/* The Result Section */}
+            <Box
+                sx={{
+                marginX: "1rem",
+                marginY: "1rem",
+                display: "flex",
+                }}
+            >
+                
+                <Box sx={{ flex: 1, paddingY: "2rem", }}>
+                <Typography
+                    variant="h4"
+                    color="initial"
+                    fontFamily={font2}
+                    sx={{ marginY: "1rem" }}
+                >
+                    The End Result
+                </Typography>
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ marginY: "1rem" }} fontFamily={font}
+                >
+                    It is a long established fact that a reader will be distracted
+                    by the of readable content of a page when lookings at its
+                    layouts the points of using that it has a more-or-less normal.
+                </Typography>
+                <Button
+                    variant="contained"
+                    sx={{
+                    backgroundColor: black,
+                    "&:hover": {
+                        backgroundColor: themeColor,
+                    },
+                    marginY: "1rem",
+                    paddingY: "1rem",
+                    paddingX: "2rem",
+                    borderRadius: "20px",
+                    }}
+                >
+                    Our Portfolio &rarr;
+                </Button>
+                </Box>
+            </Box>
+            {/* About us Section */}
+            <Box
+                sx={{
+                backgroundColor: themeColor2,
+                }}
+            >
+                <Box
+                sx={{
+                    marginX: "1rem",
+                    marginY: "5rem",
+                    paddingY: "5rem",
+                }}
+                >
+                <Typography
+                    variant="h4"
+                    color="initial"
+                    fontFamily={font2}
+                    textAlign={"center"}
+                    sx={{ width: "400px", textAlign: "center", margin: "auto" }}
+                >
+                    What the People Thinks About Us
+                </Typography>
+                <Box
+                    sx={{
+                    display: "flex",
+                    flexDirection:"column",
+                    justifyContent: "space-evenly",
+                    marginY: "2rem",
+                    }}
+                >
+                    {about.AboutUsSection.map((item) => (
+                    <PeopleBlock
+                        img={item.img}
+                        name={item.name}
+                        address={item.address}
+                        tel={item.tel}
+                        mail={item.mail}
+                    />
+                    ))}
+                </Box>
+                </Box>
+            </Box>
+            {/* Forum Section */}
+            <Box sx={{ marginX: "1rem", marginY: "5rem" }}>
+                <Typography
+                variant="h4"
+                color="initial"
+                fontFamily={font2}
+                textAlign={"center"}
+                sx={{ textAlign: "center", margin: "1rem auto" }}
+                >
+                Creative project? Let's have a productive talk.
+                </Typography>
+                <Box
+                sx={{
+                    margin: "auto",
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                }}
+                >
+                <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <TextField
+                    id="standard-basic"
+                    label="Name"
+                    variant="standard"
+                    value={null}
+                    onChange={null}
+                    sx={{ flex: 1, margin: "1rem" }}
+                    />
+                    <TextField
+                    id="standard-basic"
+                    label="Email"
+                    variant="standard"
+                    value={null}
+                    onChange={null}
+                    sx={{ flex: 1, margin: "1rem" }}
+                    />
+                </Box>
+                <TextField
+                    id="standard-basic"
+                    label="Message"
+                    variant="standard"
+                    value={null}
+                    onChange={null}
+                    sx={{ flex: 1, margin: "1rem" }}
+                    multiline
+                    rows={6}
+                />
+                </Box>
+                <Button
+                variant="contained"
+                sx={{
+                    backgroundColor: black,
+                    "&:hover": {
+                    backgroundColor: themeColor,
+                    },
+                    display: "block",
+                    marginY: "1rem",
+                    marginX: "auto",
+                    paddingY: "1rem",
+                    paddingX: "2rem",
+                    borderRadius: "20px",
+                }}
+                >
+                Send Now &rarr;
+                </Button>
+            </Box>
+            </Box>
+        )}
         </Box>
     );
 }

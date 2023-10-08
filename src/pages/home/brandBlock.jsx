@@ -2,10 +2,10 @@ import { Box } from "@mui/material";
 import React from "react";
 
 function BrandBlock(props) {
-    const { img } = props;
+    const { img, height,width } = props;
 
     return (
-        <img src={img} alt="brand" height={"50px"} width={"auto"} style={{}} />
+        <img src={img} alt="brand" height={height} width={width}  />
     );
 }
 
