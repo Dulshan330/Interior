@@ -261,6 +261,7 @@ function AboutusPage() {
                         address={item.address}
                         tel={item.tel}
                         mail={item.mail}
+                        flex={1}
                     />
                     ))}
                 </Box>
@@ -553,6 +554,7 @@ function AboutusPage() {
                         address={item.address}
                         tel={item.tel}
                         mail={item.mail}
+                        flex={null}
                     />
                     ))}
                 </Box>

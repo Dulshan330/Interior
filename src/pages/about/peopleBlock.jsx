@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { white } from "../../config";
 
 function PeopleBlock(props) {
-    const { img, name, address, tel, mail } = props;
+    const { img, name, address, tel, mail, flex } = props;
     const [isHover, setIsHover] = useState(false);
 
     const mouseEnter = () => {
@@ -21,7 +21,7 @@ function PeopleBlock(props) {
     return (
         <Box
         sx={{
-            flex: 1,
+            flex: flex,
             margin: "1rem",
             height: "45vh",
             borderRadius: "1.5rem",
