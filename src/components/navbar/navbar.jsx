@@ -4,7 +4,9 @@ import logo from "../../assets/img/Logo.jpg";
 import { navbar } from "./navbarInfo";
 import NavItemBlock from "./navItemBlock";
 import {
+    black,
     desktopView,
+    font,
     mainWidth,
     mobileViewMax,
     mobileViewMin,
@@ -17,13 +19,33 @@ function NavBar() {
     const mobilePhoneScreenMin = useMediaQuery(mobileViewMin);
     const mobilePhoneScreen = mobilePhoneScreenMax && mobilePhoneScreenMin;
 
+    const hanburgStyle = {
+        position: "relative",
+        width: "30px",
+        height: "30px",
+        cursor: "pointer",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "10px",
+    };
+
+    const hanburgStyleItem = {
+        width: "100%",
+        height: "4px",
+        backgroundColor: black,
+        borderRadius: "5px",
+        transitionDuration: ".3s",
+    };
+
     return (
         <Box>
         {/* For Desktops */}
         {desktopScreen && (
             <Box
             sx={{
-                fontFamily: "roboto,sans-serif",
+                fontFamily: font,
                 padding: "1rem",
             }}
             >
@@ -52,10 +74,26 @@ function NavBar() {
 
         {/* For Mobile Phones */}
         {mobilePhoneScreen && (
-            <Box>
-            <Typography variant="body1" color="initial">
-                Under Construction
-            </Typography>
+            <Box
+            sx={{
+                fontFamily: font,
+                padding: "1rem",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+            }}
+            >
+            <img
+                src={logo}
+                alt="Logo"
+                style={{ width: "auto", height: "35px" }}
+            />
+
+            <Box sx={hanburgStyle}>
+                <Box sx={hanburgStyleItem}></Box>
+                <Box sx={hanburgStyleItem}></Box>
+                <Box sx={hanburgStyleItem}></Box>
+            </Box>
             </Box>
         )}
         </Box>

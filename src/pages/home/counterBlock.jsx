@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
-import { themeColor } from "../../config";
+import { font, font2, themeColor } from "../../config";
 
 function CounterBlock(props) {
     const { name, count } = props;
@@ -40,7 +40,7 @@ function CounterBlock(props) {
         <Typography
             variant="h2"
             color="initial"
-            fontFamily={"DM Serif Display"}
+            fontFamily={font2}
             textAlign={"center"}
             sx={{ color: themeColor }}
         >
@@ -49,7 +49,7 @@ function CounterBlock(props) {
         <Typography
             variant="body1"
             color="initial"
-            fontFamily={"roboto,sans-serif"}
+            fontFamily={font}
             textAlign={"center"}
         >
             {name}

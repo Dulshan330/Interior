@@ -6,6 +6,8 @@ import callicon from "../../assets/img/Call Icon.png";
 import {
   black,
   desktopView,
+  font,
+  font2,
   mainWidth,
   mobileViewMax,
   mobileViewMin,
@@ -56,7 +58,7 @@ function HomePage() {
               <Box sx={{ width: "35vw" }}>
                 <Typography
                   variant="h2"
-                  fontFamily={"DM Serif Display"}
+                  fontFamily={font2}
                   color="initial"
                   sx={{ marginY: "1rem" }}
                 >
@@ -64,7 +66,7 @@ function HomePage() {
                 </Typography>
                 <Typography
                   variant="body1"
-                  fontFamily={"roboto,sans-serif"}
+                  fontFamily={font}
                   color="initial"
                   sx={{ marginY: "1rem" }}
                 >
@@ -122,7 +124,7 @@ function HomePage() {
                 <Typography
                   variant="h3"
                   color="initial"
-                  fontFamily={"DM Serif Display"}
+                  fontFamily={font2}
                   sx={{ marginY: "2rem" }}
                 >
                   We Create The Art Of Stylish Living Stylishly
@@ -130,7 +132,7 @@ function HomePage() {
                 <Typography
                   variant="body1"
                   color="initial"
-                  fontFamily={"roboto,sans-serif"}
+                  fontFamily={font}
                   sx={{ marginY: "2rem" }}
                 >
                   It is a long established fact that a reader will be distracted
@@ -205,7 +207,7 @@ function HomePage() {
             <Typography
               variant="h3"
               color="initial"
-              fontFamily={"DM Serif Display"}
+              fontFamily={font2}
               sx={{ textAlign: "center", marginY: "2rem" }}
             >
               What the People Thinks <br /> About Us
@@ -247,7 +249,7 @@ function HomePage() {
             <Typography
               variant="h3"
               color="initial"
-              fontFamily={"DM Serif Display"}
+              fontFamily={font2}
               sx={{ textAlign: "center" }}
             >
               Follow Our Projects
@@ -256,7 +258,7 @@ function HomePage() {
               <Typography
                 variant="body1"
                 color="initial"
-                fontFamily={"roboto,sans-serif"}
+                fontFamily={font}
                 sx={{ textAlign: "center", marginY: "1rem" }}
               >
                 It is a long established fact that a reader will be distracted
@@ -306,7 +308,7 @@ function HomePage() {
             <Typography
               variant="h3"
               color="initial"
-              fontFamily={"DM Serif Display"}
+              fontFamily={font2}
               sx={{ textAlign: "center" }}
             >
               Articles & News
@@ -315,7 +317,7 @@ function HomePage() {
               <Typography
                 variant="body1"
                 color="initial"
-                fontFamily={"roboto,sans-serif"}
+                fontFamily={font}
                 sx={{ textAlign: "center", marginY: "1rem" }}
               >
                 It is a long established fact that a reader will be distracted
@@ -350,7 +352,7 @@ function HomePage() {
               variant="h3"
               color={white}
               textAlign={"center"}
-              fontFamily={"DM Serif Display"}
+              fontFamily={font2}
               sx={{ marginY: "1rem" }}
             >
               Wanna join the interno?
@@ -359,7 +361,7 @@ function HomePage() {
               variant="body1"
               color={white}
               textAlign={"center"}
-              fontFamily={"roboto,sans-serif"}
+              fontFamily={font}
               sx={{ marginY: "1rem" }}
             >
               It is a long established fact will be distracted.

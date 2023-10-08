@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { themeColor2, white } from "../../config";
+import { font, font2, themeColor2, white } from "../../config";
 import { Link } from "react-router-dom";
 import arrow from "../../assets/img/arrowIcon2.png";
 
@@ -34,7 +34,7 @@ function ArticleBlock(props) {
             <Typography
             variant="body2"
             color="initial"
-            fontFamily={"roboto,sans-serif"}
+            fontFamily={font}
             sx={{
                 margin: "1rem",
                 padding: "1rem",
@@ -51,7 +51,7 @@ function ArticleBlock(props) {
             <Typography
             variant="h5"
             color="initial"
-            fontFamily={"DM Serif Display"}
+            fontFamily={font2}
             >
             {title}
             </Typography>
@@ -66,7 +66,7 @@ function ArticleBlock(props) {
             <Typography
                 variant="body2"
                 color="initial"
-                fontFamily={"roboto,sans-serif"}
+                fontFamily={font}
             >
                 {date}
             </Typography>

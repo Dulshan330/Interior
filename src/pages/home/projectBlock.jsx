@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import arrow from "../../assets/img/arrowIcon.png";
+import { font, font2 } from "../../config";
 
 function ProjectBlock(props) {
     const { img, link, catogery, name } = props;
@@ -35,10 +36,10 @@ function ProjectBlock(props) {
             }}
             >
             <Box>
-                <Typography variant="h6" color="initial" textAlign={"start"} fontFamily={"DM Serif Display"}>
+                <Typography variant="h6" color="initial" textAlign={"start"} fontFamily={font2}>
                 {name}
                 </Typography>
-                <Typography variant="body1" color="initial" fontFamily={"roboto,sans-serif"}>
+                <Typography variant="body1" color="initial" fontFamily={font}>
                 {catogery}
                 </Typography>
             </Box>

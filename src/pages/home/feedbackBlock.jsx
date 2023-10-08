@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { white } from "../../config";
+import { font2, white } from "../../config";
 
 function FeedbackBlock(props) {
     const { img, name, address, discription } = props;
@@ -28,7 +28,7 @@ function FeedbackBlock(props) {
                 <Typography
                 variant="h6"
                 color="initial"
-                fontFamily={"DM Serif Display"}
+                fontFamily={font2}
                 >
                 {name}
                 </Typography>

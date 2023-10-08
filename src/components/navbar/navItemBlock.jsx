@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { ListItem  } from "@mui/material";
 import { Link } from "react-router-dom";
-import { black, themeColor } from "../../config";
+import { black, font, themeColor } from "../../config";
 
 function NavItemBlock(props) {
 
@@ -24,7 +24,7 @@ function NavItemBlock(props) {
             to={link}
             style={{
             textDecoration: "none",
-            fontFamily: "roboto,sans-serif",
+            fontFamily: font,
             fontSize:"18px",
             ...linkStyle,
             color: hoveredLink === text ? themeColor : linkStyle.color,

@@ -1,5 +1,3 @@
-import { useMediaQuery } from "@mui/material";
-
 // config.js
 export const mainWidth = "1280px";
 
@@ -13,3 +11,7 @@ export const themeColor = "#CDA274";
 export const themeColor2= "#F4F0EC";
 export const black = "#000000";
 export const white = "#ffffff";
+
+//font family
+export const font = "roboto,sans-serif";
+export const font2 = "DM Serif Display";

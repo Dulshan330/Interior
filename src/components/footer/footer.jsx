@@ -3,7 +3,7 @@ import React from "react";
 import logo from "../../assets/img/Logo.jpg";
 import { footer } from "./footerInfo";
 import FooterLinkBloack from "./footerLinkBlock";
-import { desktopView, mainWidth, mobileViewMax, mobileViewMin } from "../../config";
+import { desktopView, font, font2, mainWidth, mobileViewMax, mobileViewMin } from "../../config";
 
 function Footer() {
     const flexboxstyle = { padding: "1.5rem", flex: 1 };
@@ -19,7 +19,7 @@ function Footer() {
         {/* For Desktops */}
         {desktopScreen && (
             <Box>
-            <Box sx={{ fontFamily: "roboto,sans-serif" }}>
+            <Box sx={{ fontFamily: font }}>
                 <Box
                 sx={{
                     margin: "auto",

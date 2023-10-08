@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import { black } from "../../config";
+import { black, font, font2 } from "../../config";
 
 function WorkBlock(props) {
     const { title, contain, link } = props;
@@ -21,7 +21,7 @@ function WorkBlock(props) {
             variant="h5"
             color="initial"
             sx={{
-            fontFamily: "DM Serif Display",
+            fontFamily: font2,
             }}
         >
             {title}
@@ -34,7 +34,7 @@ function WorkBlock(props) {
             style={{
             textDecoration: "none",
             color: black,
-            fontFamily: "roboto,sans-serif",
+            fontFamily: font,
             fontSize: "15px",
             fontWeight:"bold"
             }}

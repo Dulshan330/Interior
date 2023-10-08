@@ -9,7 +9,7 @@ import React from "react";
 import banner from "../../assets/img/AboutBanner.jpg";
 import whatwedo from "../../assets/img/AboutPage/Photo-1.jpg";
 import theresult from "../../assets/img/AboutPage/Photo.jpg";
-import { mainWidth, themeColor2, white, themeColor, black, desktopView, mobileViewMax, mobileViewMin } from "../../config";
+import { mainWidth, themeColor2, white, themeColor, black, desktopView, mobileViewMax, mobileViewMin, font, font2 } from "../../config";
 import { about } from "./aboutInfo";
 import PeopleBlock from "./peopleBlock";
 
@@ -57,14 +57,14 @@ function AboutusPage() {
                     <Typography
                     variant="h3"
                     color="initial"
-                    fontFamily={"DM Serif Display"}
+                    fontFamily={font2}
                     >
                     About Us
                     </Typography>
                     <Typography
                     variant="body1"
                     color="initial"
-                    textAlign={"center"}
+                    textAlign={"center"}fontFamily={font}
                     >
                     Home / About Us
                     </Typography>
@@ -93,7 +93,7 @@ function AboutusPage() {
                 <Typography
                     variant="h2"
                     color="initial"
-                    fontFamily={"DM Serif Display"}
+                    fontFamily={font2}
                     textAlign={"center"}
                 >
                     “
@@ -101,7 +101,7 @@ function AboutusPage() {
                 <Typography
                     variant="h6"
                     color="initial"
-                    fontFamily={"DM Serif Display"}
+                    fontFamily={font2}
                     textAlign={"center"}
                     sx={{ fontStyle: "italic" }}
                 >
@@ -112,7 +112,7 @@ function AboutusPage() {
                     variant="body1"
                     color="initial"
                     textAlign={"center"}
-                    sx={{ marginY: "1.5rem" }}
+                    sx={{ marginY: "1.5rem" }} fontFamily={font}
                 >
                     -BUNNY WILLIAMS-
                 </Typography>
@@ -131,7 +131,7 @@ function AboutusPage() {
                 <Typography
                     variant="h4"
                     color="initial"
-                    fontFamily={"DM Serif Display"}
+                    fontFamily={font2}
                     sx={{ marginY: "1rem" }}
                 >
                     What We Do
@@ -139,7 +139,7 @@ function AboutusPage() {
                 <Typography
                     variant="body1"
                     color="initial"
-                    sx={{ marginY: "1rem" }}
+                    sx={{ marginY: "1rem" }} fontFamily={font}
                 >
                     It is a long established fact that a reader will be distracted
                     by the of readable content of a page when lookings at its
@@ -193,7 +193,7 @@ function AboutusPage() {
                 <Typography
                     variant="h4"
                     color="initial"
-                    fontFamily={"DM Serif Display"}
+                    fontFamily={font2}
                     sx={{ marginY: "1rem" }}
                 >
                     The End Result
@@ -201,7 +201,7 @@ function AboutusPage() {
                 <Typography
                     variant="body1"
                     color="initial"
-                    sx={{ marginY: "1rem" }}
+                    sx={{ marginY: "1rem" }} fontFamily={font}
                 >
                     It is a long established fact that a reader will be distracted
                     by the of readable content of a page when lookings at its
@@ -241,7 +241,7 @@ function AboutusPage() {
                 <Typography
                     variant="h4"
                     color="initial"
-                    fontFamily={"DM Serif Display"}
+                    fontFamily={font2}
                     textAlign={"center"}
                     sx={{ width: "400px", textAlign: "center", margin: "auto" }}
                 >
@@ -271,7 +271,7 @@ function AboutusPage() {
                 <Typography
                 variant="h4"
                 color="initial"
-                fontFamily={"DM Serif Display"}
+                fontFamily={font2}
                 textAlign={"center"}
                 sx={{ width: "500px", textAlign: "center", margin: "1rem auto" }}
                 >
