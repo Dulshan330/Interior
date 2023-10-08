@@ -8,7 +8,7 @@ function FooterLinkBloack(props) {
     const { text, link } = props;
 
     return (
-        <ListItem sx={{ paddingX:0}}>
+        <ListItem sx={{ paddingX:0,}} texts>
         <Link
             to={link}
             style={{

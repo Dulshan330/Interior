@@ -1,5 +1,5 @@
 import { Box, List, useMediaQuery, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/img/Logo.jpg";
 import { navbar } from "./navbarInfo";
 import NavItemBlock from "./navItemBlock";
@@ -13,11 +13,14 @@ import {
 } from "../../config";
 
 function NavBar() {
-  // Responsive settings
+    // Responsive settings
     const desktopScreen = useMediaQuery(desktopView);
     const mobilePhoneScreenMax = useMediaQuery(mobileViewMax);
     const mobilePhoneScreenMin = useMediaQuery(mobileViewMin);
     const mobilePhoneScreen = mobilePhoneScreenMax && mobilePhoneScreenMin;
+
+    // use state settings
+    const [hanburgNav, setHanburgNav] = useState(false);
 
     const hanburgStyle = {
         position: "relative",
@@ -37,6 +40,10 @@ function NavBar() {
         backgroundColor: black,
         borderRadius: "5px",
         transitionDuration: ".3s",
+    };
+
+    const hanburgClick = () => {
+        setHanburgNav(!hanburgNav);
     };
 
     return (
@@ -74,26 +81,48 @@ function NavBar() {
 
         {/* For Mobile Phones */}
         {mobilePhoneScreen && (
+            <Box>
             <Box
-            sx={{
+                sx={{
                 fontFamily: font,
                 padding: "1rem",
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-            }}
+                }}
             >
-            <img
+                <img
                 src={logo}
                 alt="Logo"
                 style={{ width: "auto", height: "35px" }}
-            />
+                />
 
-            <Box sx={hanburgStyle}>
+                <Box sx={hanburgStyle} onClick={hanburgClick}>
                 <Box sx={hanburgStyleItem}></Box>
                 <Box sx={hanburgStyleItem}></Box>
                 <Box sx={hanburgStyleItem}></Box>
+                </Box>
             </Box>
+            {hanburgNav && (
+                <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                }}
+                >
+                <List
+                    sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    }}
+                >
+                    {navbar.items.map((item) => (
+                    <NavItemBlock text={item.text} link={item.link} />
+                    ))}
+                </List>
+                </Box>
+            )}
             </Box>
         )}
         </Box>
