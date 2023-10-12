@@ -34,7 +34,7 @@ function HomePage() {
     <Box>
       {/* ----------------- For Desktops ----------------- */}
       {desktopScreen && (
-        <Box>
+        <Box sx={{marginTop:"5rem"}}>
           {/* Hero section  */}
           <Box
             sx={{
@@ -390,7 +390,7 @@ function HomePage() {
 
       {/* ----------------- For Mobile Phones ----------------- */}
       {mobilePhoneScreen && (
-        <Box>
+        <Box sx={{marginTop:"4rem"}}>
           {/* Hero section  */}
           <Box
             sx={{

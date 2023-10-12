@@ -25,7 +25,7 @@ function AboutusPage() {
         <Box>
         {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
-            <Box>
+            <Box sx={{marginTop:"5rem"}}>
             {/* Banner Section */}
             <Box
                 sx={{
@@ -339,7 +339,7 @@ function AboutusPage() {
 
         {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
-            <Box>
+            <Box sx={{marginTop:"4rem"}}>
             {/* Banner Section */}
             <Box
                 sx={{

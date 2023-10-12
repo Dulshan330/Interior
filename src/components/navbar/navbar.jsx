@@ -10,6 +10,7 @@ import {
     mainWidth,
     mobileViewMax,
     mobileViewMin,
+    white,
 } from "../../config";
 
 function NavBar() {
@@ -54,6 +55,12 @@ function NavBar() {
             sx={{
                 fontFamily: font,
                 padding: "1rem",
+                position:"fixed",
+                backgroundColor:white,
+                width:"100%",
+                top:0,
+                zIndex:1,
+                boxShadow:"0 2px 4px 0 rgba(0, 0, 0, 0.2)",
             }}
             >
             <Box
@@ -81,7 +88,14 @@ function NavBar() {
 
         {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
-            <Box>
+            <Box sx={{
+                position:"fixed",
+                backgroundColor:white,
+                width:"100%",
+                top:0,
+                zIndex:1,
+                boxShadow:"0 2px 4px 0 rgba(0, 0, 0, 0.2)",
+                }}>
             <Box
                 sx={{
                 fontFamily: font,
