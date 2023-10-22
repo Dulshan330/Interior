@@ -1,19 +1,21 @@
-import { Route,Routes } from 'react-router-dom';
-import './App.css';
-import NavBar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
-import AboutusPage from './pages/about/aboutusPage';
-import HomePage from './pages/home/homePage';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import NavBar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
+import AboutusPage from "./pages/about/aboutusPage";
+import HomePage from "./pages/home/homePage";
+import Error404 from "./pages/404/404";
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar />
       <Routes>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path='/about' element={<AboutusPage/>}/>
+        <Route path="/*" element={<Error404 />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutusPage />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
