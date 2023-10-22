@@ -7,7 +7,7 @@ export const footer = {
         { text: "Our Projects", link: "/" },
         { text: "Our Team", link: "/" },
         { text: "Contact Us", link: "/" },
-        { text: "Service", link: "/" },
+        { text: "Service", link: "/service" },
     ],
     servicesTitle: "Services",
     services: [
