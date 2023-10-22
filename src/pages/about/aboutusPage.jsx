@@ -535,7 +535,7 @@ function AboutusPage() {
                     color="initial"
                     fontFamily={font2}
                     textAlign={"center"}
-                    sx={{ width: "400px", textAlign: "center", margin: "auto" }}
+                    sx={{ width: "300px", textAlign: "center", margin: "auto" }}
                 >
                     What the People Thinks About Us
                 </Typography>
