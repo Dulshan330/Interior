@@ -16,6 +16,7 @@ import banner from "../../assets/img/Services/banner.jpg";
 import { service } from "./serviceInfo";
 import ServiceBlock from "./serviceBlock";
 
+
 function ServicePage() {
   // Responsive settings
     const desktopScreen = useMediaQuery(desktopView);
@@ -82,7 +83,7 @@ function ServicePage() {
                     <ServiceBlock
                     title={item.title}
                     contain={item.contain}
-                    link={item.link}
+                    id={item.id}
                     />
                 ))}
                 </Grid>
@@ -195,7 +196,7 @@ function ServicePage() {
                     <ServiceBlock
                     title={item.title}
                     contain={item.contain}
-                    link={item.link}
+                    id={item.id}
                     />
                 ))}
                 </Grid>

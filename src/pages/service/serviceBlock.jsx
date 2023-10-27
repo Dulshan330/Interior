@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function ServiceBlock(props) {
 
-    const {title, contain, link, } = props;
+    const {title, contain, id, } = props;
 
     return (
         <Box sx={{
@@ -31,7 +31,7 @@ function ServiceBlock(props) {
             {contain}
         </Typography>
         <Link
-            to={link}
+            to={`/service/${id}`}
             style={{
             textDecoration: "none",
             color: black,
