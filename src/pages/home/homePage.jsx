@@ -20,8 +20,9 @@ import WorkBlock from "./workBlock";
 import FeedbackBlock from "./feedbackBlock";
 import BrandBlock from "./brandBlock";
 import ProjectBlock from "./projectBlock";
-import CounterBlock from "./counterBlock";
 import ArticleBlock from "./articleBlock";
+import Counter from "../../components/counter/counter";
+
 
 function HomePage() {
   // Responsive settings
@@ -286,23 +287,7 @@ function HomePage() {
             </Grid>
           </Box>
           {/* counter Section */}
-          <Box sx={{ backgroundColor: themeColor2 }}>
-            <Box
-              sx={{
-                width: mainWidth,
-                marginX: "auto",
-                marginY: "5rem",
-                paddingY: "6rem",
-                display: "flex",
-                justifyContent: "space-evenly",
-                alignItems: "center",
-              }}
-            >
-              {home.CounterSection.map((item) => (
-                <CounterBlock name={item.name} count={item.count} />
-              ))}
-            </Box>
-          </Box>
+          <Counter/>
           {/* Article Section */}
           <Box sx={{ width: mainWidth, marginX: "auto", marginY: "5rem" }}>
             <Typography
@@ -630,23 +615,7 @@ function HomePage() {
             </Grid>
           </Box>
           {/* counter Section */}
-          <Box sx={{ backgroundColor: themeColor2 }}>
-            <Box
-              sx={{
-                marginX: "1rem",
-                marginY: "5rem",
-                paddingY: "3rem",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              {home.CounterSection.map((item) => (
-                <CounterBlock name={item.name} count={item.count} />
-              ))}
-            </Box>
-          </Box>
+          <Counter/>
           {/* Article Section */}
           <Box sx={{ marginX: "1rem", marginY: "5rem" }}>
             <Typography

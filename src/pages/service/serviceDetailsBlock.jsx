@@ -13,6 +13,7 @@ import {
     white,
 } from "../../config";
 import banner from "../../assets/img/Services/singleServiceBanner.jpg";
+import Counter from '../../components/counter/counter';
 
 function ServiceDetailsBlock() {
     const { id } = useParams();
@@ -75,6 +76,8 @@ function ServiceDetailsBlock() {
                 </Box>
                 </Box>
             </Box>
+            {/* Counter Section */}
+            <Counter/>
             </Box>
         )}
         {/* ----------------- For Mobile Phones ----------------- */}
@@ -121,6 +124,8 @@ function ServiceDetailsBlock() {
                 </Box>
                 </Box>
             </Box>
+            {/* Counter Section */}
+            <Counter/>
             </Box>
         )}
         </Box>
