@@ -18,7 +18,7 @@ import ServiceBlock from "./serviceBlock";
 
 
 function ServicePage() {
-  // Responsive settings
+    // Responsive settings
     const desktopScreen = useMediaQuery(desktopView);
     const mobilePhoneScreenMax = useMediaQuery(mobileViewMax);
     const mobilePhoneScreenMin = useMediaQuery(mobileViewMin);
