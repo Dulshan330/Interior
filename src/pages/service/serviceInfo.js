@@ -22,7 +22,7 @@ export const service = {
         title: "2d/3d Art Work",
         contain:
             "There are many variations of the passages of lorem Ipsum from available, majority.",
-        id: "2d/3d-art-work",
+        id: "2d-3d-art-work",
         },
         {
         title: "Interior Work",
