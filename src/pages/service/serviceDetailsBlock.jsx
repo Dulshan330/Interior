@@ -15,7 +15,7 @@ function ServiceDetailsBlock() {
 
     return (
         <Box sx={{marginTop:"6rem"}}>
-        <Typography variant="h5">{selectedService.id}</Typography>
+        <Typography variant="h5">{selectedService.title}</Typography>
         <Typography variant="body1">{selectedService.contain}</Typography>
         <Link to="/service">Back to Services</Link>
         </Box>
