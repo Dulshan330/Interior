@@ -13,13 +13,15 @@ import {
     white,
 } from "../../config";
 import banner from "../../assets/img/Services/singleServiceBanner.jpg";
-import Counter from '../../components/counter/counter';
+import Counter from "../../components/counter/counter";
+import ClientLogo from "../../components/clientLogo/clientLogo";
+import videoSource from "../../assets/video/video.mp4";
 
 function ServiceDetailsBlock() {
     const { id } = useParams();
     const selectedService = service.services.find((item) => item.id === id);
 
-    // Responsive settings
+  // Responsive settings
     const desktopScreen = useMediaQuery(desktopView);
     const mobilePhoneScreenMax = useMediaQuery(mobileViewMax);
     const mobilePhoneScreenMin = useMediaQuery(mobileViewMin);
@@ -76,8 +78,57 @@ function ServiceDetailsBlock() {
                 </Box>
                 </Box>
             </Box>
+            {/* Details Section */}
+            <Box
+                sx={{
+                marginY: "3rem",
+                width: mainWidth,
+                marginX: "auto",
+                display: "flex",
+                }}
+            >
+                <Box sx={{ flex: 1, padding: "2rem" }}>
+                <Typography
+                    variant="h3"
+                    color="initial"
+                    sx={{ fontFamily: font2 }}
+                >
+                    {selectedService.detailsTitle}
+                </Typography>
+                </Box>
+                <Box sx={{ flex: 1, padding: "2rem" }}>
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ fontFamily: font, textAlign: "justify" }}
+                >
+                    {selectedService.detailsDescription}
+                </Typography>
+                <br />
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ fontFamily: font, textAlign: "justify" }}
+                >
+                    {selectedService.detailsDescription2}
+                </Typography>
+                </Box>
+            </Box>
+            {/* Client Logo Section */}
+            <ClientLogo />
+            {/* Video Section */}
+            <Box
+                sx={{
+                width: mainWidth,
+                marginX: "auto",
+                marginY: "4rem",
+                }}
+            >
+                <Typography variant="body1" color="initial">video</Typography>
+            </Box>
+
             {/* Counter Section */}
-            <Counter/>
+            <Counter />
             </Box>
         )}
         {/* ----------------- For Mobile Phones ----------------- */}
@@ -124,8 +175,45 @@ function ServiceDetailsBlock() {
                 </Box>
                 </Box>
             </Box>
+            {/* Details Section */}
+            <Box
+                sx={{
+                marginY: "3rem",
+                display: "flex",
+                flexDirection: "column",
+                }}
+            >
+                <Box sx={{ flex: 1, padding: "2rem" }}>
+                <Typography
+                    variant="h4"
+                    color="initial"
+                    sx={{ fontFamily: font2 }}
+                >
+                    {selectedService.detailsTitle}
+                </Typography>
+                </Box>
+                <Box sx={{ flex: 1, padding: "2rem" }}>
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ fontFamily: font, textAlign: "justify" }}
+                >
+                    {selectedService.detailsDescription}
+                </Typography>
+                <br />
+                <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ fontFamily: font, textAlign: "justify" }}
+                >
+                    {selectedService.detailsDescription2}
+                </Typography>
+                </Box>
+            </Box>
+            {/* Client Logo Section */}
+            <ClientLogo />
             {/* Counter Section */}
-            <Counter/>
+            <Counter />
             </Box>
         )}
         </Box>

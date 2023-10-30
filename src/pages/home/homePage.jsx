@@ -18,10 +18,10 @@ import {
 import { home } from "./homeInfo";
 import WorkBlock from "./workBlock";
 import FeedbackBlock from "./feedbackBlock";
-import BrandBlock from "./brandBlock";
 import ProjectBlock from "./projectBlock";
 import ArticleBlock from "./articleBlock";
 import Counter from "../../components/counter/counter";
+import ClientLogo from "../../components/clientLogo/clientLogo";
 
 
 function HomePage() {
@@ -223,21 +223,8 @@ function HomePage() {
               ))}
             </Box>
           </Box>
-          {/* Brand Section */}
-          <Box
-            sx={{
-              width: mainWidth,
-              marginX: "auto",
-              marginY: "5rem",
-              display: "flex",
-              padding: "2rem 1rem",
-              justifyContent: "space-evenly",
-            }}
-          >
-            {home.BrandSection.map((item) => (
-              <BrandBlock img={item.img} height={"50px"} width={"auto"} />
-            ))}
-          </Box>
+          {/* Client Logo Section */}
+          <ClientLogo/>
           {/* Project Section */}
           <Box
             sx={{
@@ -550,23 +537,8 @@ function HomePage() {
               ))}
             </Box>
           </Box>
-          {/* Brand Section */}
-          <Box
-            sx={{
-              height: "80vh",
-              marginX: "1rem",
-              marginY: "5rem",
-              display: "flex",
-              padding: "2rem 1rem",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            {home.BrandSection.map((item) => (
-              <BrandBlock img={item.img} height={"auto"} width={"150px"} />
-            ))}
-          </Box>
+          {/* Client Logo Section */}
+          <ClientLogo/>
           {/* Project Section */}
           <Box
             sx={{

@@ -58,13 +58,6 @@ export const home = {
             "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled.",
         },
     ],
-    BrandSection: [
-        { img: brand1 },
-        { img: brand2 },
-        { img: brand3 },
-        { img: brand4 },
-        { img: brand5 },
-    ],
     ProjectSection: [
         {
         img: project1,
