@@ -1,11 +1,6 @@
 import profile1 from "../../assets/img/Profile/profile1.jpg";
 import profile2 from "../../assets/img/Profile/profile2.jpg";
 import profile3 from "../../assets/img/Profile/profile3.jpg";
-import brand1 from "../../assets/img/Brand/01.jpg";
-import brand2 from "../../assets/img/Brand/02.jpg";
-import brand3 from "../../assets/img/Brand/03.jpg";
-import brand4 from "../../assets/img/Brand/04.jpg";
-import brand5 from "../../assets/img/Brand/05.jpg";
 import project1 from "../../assets/img/Projects/Photo-1.jpg";
 import project2 from "../../assets/img/Projects/Photo-2.jpg";
 import project3 from "../../assets/img/Projects/Photo-3.jpg";
@@ -20,19 +15,19 @@ export const home = {
         title: "Project Plan",
         contain:
             "There are many variations of the passages of lorem Ipsum from available, majority.",
-        link: "/",
+        link: "/service/project-plan",
         },
         {
         title: "Interior Plan",
         contain:
             "There are many variations of the passages of lorem Ipsum from available, majority.",
-        link: "/",
+        link: "/service/interior-work",
         },
         {
-        title: "Realization",
+        title: "Retail Design",
         contain:
             "There are many variations of the passages of lorem Ipsum from available, majority.",
-        link: "/",
+        link: "/service/retail-design",
         },
     ],
     FeedbackSection: [
