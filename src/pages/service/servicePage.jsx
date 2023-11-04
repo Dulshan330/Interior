@@ -15,10 +15,10 @@ import {
 import banner from "../../assets/img/Services/banner.jpg";
 import { service } from "./serviceInfo";
 import ServiceBlock from "./serviceBlock";
-
+import HowWeWorkBlock from "./howWeWorkBlock";
 
 function ServicePage() {
-    // Responsive settings
+  // Responsive settings
     const desktopScreen = useMediaQuery(desktopView);
     const mobilePhoneScreenMax = useMediaQuery(mobileViewMax);
     const mobilePhoneScreenMin = useMediaQuery(mobileViewMin);
@@ -88,8 +88,50 @@ function ServicePage() {
                 ))}
                 </Grid>
             </Box>
-            {/* How we do Section */}
-            <Box sx={{ width: mainWidth, marginX: "auto" }}></Box>
+            {/* How We Work Section */}
+            <Box
+                sx={{
+                width: mainWidth,
+                marginY: "5rem",
+                marginX: "auto",
+                backgroundColor: themeColor2,
+                borderRadius: "4rem",
+                paddingY: "6rem",
+                paddingX: "3rem",
+                }}
+            >
+                <Typography
+                variant="h3"
+                color="initial"
+                sx={{ textAlign: "center", fontFamily: font2 }}
+                >
+                How We Work
+                </Typography>
+                <Typography
+                variant="body1"
+                color="initial"
+                sx={{ textAlign: "center", fontFamily: font, marginY: "0.5rem" }}
+                >
+                It is a long established fact will be distracted. Lorem Ipsum is
+                simply dummy text of the printing and typesetting industry.
+                </Typography>
+                <Box sx={{ marginTop: "4rem" }}>
+                {service.howWeWork.map((item) => (
+                    <HowWeWorkBlock
+                    img1={item.img1}
+                    icon1={item.icon1}
+                    number1={item.number1}
+                    title1={item.title1}
+                    description1={item.description1}
+                    img2={item.img2}
+                    icon2={item.icon2}
+                    number2={item.number2}
+                    title2={item.title2}
+                    description2={item.description2}
+                    />
+                ))}
+                </Box>
+            </Box>
             {/* Contact Section */}
             <Box
                 sx={{
@@ -201,8 +243,49 @@ function ServicePage() {
                 ))}
                 </Grid>
             </Box>
-            {/* How we do Section */}
-            <Box sx={{ marginX: "auto" }}></Box>
+            {/* How We Work Section */}
+            <Box
+                sx={{
+                marginTop: "4rem",
+                marginX: "auto",
+                backgroundColor: themeColor2,
+                borderRadius: "4rem",
+                paddingY: "2rem",
+                paddingX: "3rem",
+                }}
+            >
+                <Typography
+                variant="h4"
+                color="initial"
+                sx={{ textAlign: "center", fontFamily: font2 }}
+                >
+                How We Work
+                </Typography>
+                <Typography
+                variant="body1"
+                color="initial"
+                sx={{ textAlign: "center", fontFamily: font, marginY: "0.5rem" }}
+                >
+                It is a long established fact will be distracted. Lorem Ipsum is
+                simply dummy text of the printing and typesetting industry.
+                </Typography>
+                <Box sx={{ marginTop: "3rem" }}>
+                {service.howWeWork.map((item) => (
+                    <HowWeWorkBlock
+                    img1={item.img1}
+                    icon1={item.icon1}
+                    number1={item.number1}
+                    title1={item.title1}
+                    description1={item.description1}
+                    img2={item.img2}
+                    icon2={item.icon2}
+                    number2={item.number2}
+                    title2={item.title2}
+                    description2={item.description2}
+                    />
+                ))}
+                </Box>
+            </Box>
             {/* Contact Section */}
             <Box
                 sx={{

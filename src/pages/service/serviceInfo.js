@@ -1,3 +1,12 @@
+import img01 from "../../assets/img/Services/howWeWork/Photo1.jpg";
+import img02 from "../../assets/img/Services/howWeWork/Photo2.jpg";
+import img03 from "../../assets/img/Services/howWeWork/Photo3.jpg";
+import img04 from "../../assets/img/Services/howWeWork/Photo4.jpg";
+import icon01 from "../../assets/img/Services/howWeWork/Icon/1.png";
+import icon02 from "../../assets/img/Services/howWeWork/Icon/2.png";
+import icon03 from "../../assets/img/Services/howWeWork/Icon/3.png";
+import icon04 from "../../assets/img/Services/howWeWork/Icon/4.png";
+
 export const service = {
     services: [
         {
@@ -187,5 +196,30 @@ export const service = {
         ],
         },
     ],
-    whatwedo: [],
+    howWeWork: [
+        {
+            img1:img01,
+            icon1:icon01,
+            number1:"01",
+            title1:"Concept & Details",
+            description1:"It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry. ",
+            img2:img02,
+            icon2:icon02,
+            number2:"02",
+            title2:"Idea for Work",
+            description2:"It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.",
+        },
+        {
+            img1:img03,
+            icon1:icon03,
+            number1:"03",
+            title1:"Design",
+            description1:"It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.",
+            img2:img04,
+            icon2:icon04,
+            number2:"04",
+            title2:"Perfection",
+            description2:"It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.",
+        },
+    ],
 };
