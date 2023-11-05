@@ -173,7 +173,7 @@ function MemberDetailsBlock() {
                 <Box
                     sx={{
                     backgroundColor: white,
-                    padding: "2rem 4rem",
+                    padding: "2rem 2rem",
                     borderTopLeftRadius: "2rem",
                     borderTopRightRadius: "2rem",
                     }}
