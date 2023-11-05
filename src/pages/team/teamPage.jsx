@@ -15,7 +15,7 @@ import MemberBlock from "./memberBlock";
 
 function TeamPage() {
 
-  // Responsive settings
+    // Responsive settings
     const desktopScreen = useMediaQuery(desktopView);
     const mobilePhoneScreenMax = useMediaQuery(mobileViewMax);
     const mobilePhoneScreenMin = useMediaQuery(mobileViewMin);
@@ -78,6 +78,7 @@ function TeamPage() {
                 >
                 {team.member.map((item) => (
                     <MemberBlock
+                    id = {item.id}
                     name={item.name}
                     img={item.img}
                     designation={item.designation}
@@ -145,6 +146,7 @@ function TeamPage() {
                 >
                 {team.member.map((item) => (
                     <MemberBlock
+                    id = {item.id}
                     name={item.name}
                     img={item.img}
                     designation={item.designation}

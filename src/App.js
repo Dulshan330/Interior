@@ -9,6 +9,7 @@ import Error404 from "./pages/404/404";
 import ServicePage from "./pages/service/servicePage";
 import ServiceDetailsBlock from './pages/service/serviceDetailsBlock';
 import TeamPage from './pages/team/teamPage';
+import MemberDetailsBlock from './pages/team/memberDetailsBlock';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/service/" element={<ServicePage />} />
         <Route path="/service/:id" element={<ServiceDetailsBlock />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/team/:id" element={<MemberDetailsBlock />} />
       </Routes>
       <Footer />
     </div>

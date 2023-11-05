@@ -32,7 +32,7 @@ function MemberBlock(props) {
                 height: "300px",
                 background: `url(${img})`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "top center",
                 borderRadius: "1rem",
             }}
             ></Box>
