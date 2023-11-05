@@ -283,12 +283,12 @@ function ServiceDetailsBlock() {
                 <Box
                     sx={{
                     backgroundColor: white,
-                    padding: "2rem 6rem",
+                    padding: "2rem 2rem",
                     borderTopLeftRadius: "2rem",
                     borderTopRightRadius: "2rem",
                     }}
                 >
-                    <Typography variant="h4" color="initial" fontFamily={font2}>
+                    <Typography variant="h4" color="initial" fontFamily={font2} textAlign={"center"}> 
                     {selectedService.title}
                     </Typography>
                     <Typography

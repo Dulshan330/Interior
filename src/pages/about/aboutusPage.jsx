@@ -362,7 +362,7 @@ function AboutusPage() {
                 <Box
                     sx={{
                     backgroundColor: white,
-                    padding: "2rem 6rem",
+                    padding: "2rem 4rem",
                     borderTopLeftRadius: "2rem",
                     borderTopRightRadius: "2rem",
                     }}
