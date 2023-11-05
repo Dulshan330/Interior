@@ -8,6 +8,8 @@ import HomePage from "./pages/home/homePage";
 import Error404 from "./pages/404/404";
 import ServicePage from "./pages/service/servicePage";
 import ServiceDetailsBlock from './pages/service/serviceDetailsBlock';
+import TeamPage from './pages/team/teamPage';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/about" element={<AboutusPage />} />
         <Route path="/service/" element={<ServicePage />} />
         <Route path="/service/:id" element={<ServiceDetailsBlock />} />
+        <Route path="/team" element={<TeamPage />} />
       </Routes>
       <Footer />
     </div>

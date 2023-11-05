@@ -5,7 +5,7 @@ export const footer = {
     pages: [
         { text: "About Us", link: "/about" },
         { text: "Our Projects", link: "/" },
-        { text: "Our Team", link: "/" },
+        { text: "Our Team", link: "/team" },
         { text: "Contact Us", link: "/" },
         { text: "Service", link: "/service" },
     ],
