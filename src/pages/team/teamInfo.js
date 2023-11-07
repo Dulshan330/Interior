@@ -26,10 +26,10 @@ export const team = {
         brief_description:
             "John Doe serves as the visionary force behind our interior design company, holding the distinguished role of founder and creative director. His unwavering dedication lies in the art of crafting distinctive, practical, and visually captivating environments. As a true maestro of interior design, John's passion fuels his pursuit of spaces that not only transcend the ordinary but also seamlessly integrate functionality with aesthetic allure. His leadership and expertise form the backbone of our organization, consistently inspiring the creation of exceptional, one-of-a-kind designs that leave a lasting impression. With a commitment to uniqueness and an unyielding devotion to both form and function, John Doe embodies the essence of our interior design philosophy.",
         skills: [
-            "Interior Design",
-            "Space Planning",
-            "Color Theory",
-            "Furniture Selection",
+            { name: "Interior Design", percentage: 85 },
+            { name: "Space Planning", percentage: 80 },
+            { name: "Color Theory", percentage: 75 },
+            { name: "Furniture Selection", percentage: 90 },
         ],
         },
         {
@@ -49,10 +49,10 @@ export const team = {
         brief_description:
             "Jane Smith stands as a seasoned senior interior designer, renowned for her impeccable design acumen and her innate talent for fashioning spaces that radiate both sophistication and comfort. With a remarkable ability to seamlessly blend aesthetics and functionality, Jane consistently transforms interiors into captivating works of art. Her extensive experience and creative vision are the cornerstones of her success, leading to a portfolio of remarkable projects that embody her unique approach to interior design. Jane Smith's designs are a testament to her commitment to crafting environments that not only inspire awe but also provide a warm and inviting sanctuary, where both style and comfort harmoniously coexist.",
         skills: [
-            "Interior Design",
-            "Space Planning",
-            "Material Selection",
-            "Project Management",
+            { name: "Interior Design", percentage: 75 },
+            { name: "Space Planning", percentage: 70 },
+            { name: "Material Selection", percentage: 65 },
+            { name: "Project Management", percentage: 80 },
         ],
         },
         {
@@ -72,10 +72,10 @@ export const team = {
         brief_description:
             "David Brown is a multifaceted professional, excelling as both an architect and interior designer, with a unique ability to harmoniously fuse the realms of architecture and interior design. He is a master of the art of crafting spaces that effortlessly marry functionality with aesthetic appeal. His versatile expertise allows him to shape environments that transcend the conventional, seamlessly integrating architectural elements and interior design to produce remarkable results. David's visionary approach breathes life into spaces that not only serve their practical purpose but also captivate with their visual allure. His portfolio is a testament to his talent for creating interiors that are both functional and exquisitely pleasing to the eye, setting a new standard in the world of design.",
         skills: [
-            "Architectural Design",
-            "Interior Design",
-            "CAD Drafting",
-            "3D Modeling",
+            { name: "Architectural Design", percentage: 70 },
+            { name: "Interior Design", percentage: 60 },
+            { name: "CAD Drafting", percentage: 80 },
+            { name: "3D Modeling", percentage: 50 },
         ],
         },
         {
@@ -95,10 +95,10 @@ export const team = {
         brief_description:
             "Emily White embodies the role of a distinguished senior design consultant, showcasing exceptional prowess in the art of comprehending and translating clients' unique requirements into bespoke interior design solutions. With a remarkable talent for empathetically connecting with clients, she intuitively deciphers their desires and preferences, paving the way for tailor-made design concepts that reflect their individuality. Emily's expertise extends beyond conventional design, delving into the realm of personalization and transformation. Her ability to transform abstract ideas into tangible, aesthetically pleasing, and functional spaces is a testament to her skill. As a trusted advisor, she consistently provides clients with an unrivaled design experience, leaving them with spaces that not only meet their needs but also resonate with their distinct sensibilities, making her a standout in the world of interior design consulting.",
         skills: [
-            "Client Consultation",
-            "Interior Styling",
-            "Color Coordination",
-            "Furniture Sourcing",
+            { name: "Client Consultation", percentage: 75 },
+            { name: "Interior Styling", percentage: 65 },
+            { name: "Color Coordination", percentage: 70 },
+            { name: "Furniture Sourcing", percentage: 90 },
         ],
         },
         {
@@ -118,10 +118,10 @@ export const team = {
         brief_description:
             "Michael Green stands out as an accomplished interior architect celebrated for his exceptional talent in seamlessly weaving together the worlds of architecture and interior design. His distinctive expertise lies in crafting spaces that effortlessly blend beauty and functionality, transcending the traditional boundaries of both disciplines. Michael's designs represent a harmonious marriage of architectural ingenuity and interior aesthetic, culminating in spaces that are as visually stunning as they are practical. His visionary approach yields environments that not only captivate the eye but also serve their intended purpose with remarkable efficiency. Michael Green's portfolio showcases his ability to redefine the very essence of interior architecture, setting a standard for the creation of breathtaking, highly functional spaces.",
         skills: [
-            "Interior Architecture",
-            "Spatial Planning",
-            "Sustainable Design",
-            "Construction Management",
+            { name: "Interior Architecture", percentage: 80 },
+            { name: "Spatial Planning", percentage: 75 },
+            { name: "Sustainable Design", percentage: 95 },
+            { name: "Construction Management", percentage: 60 },
         ],
         },
         {
@@ -141,10 +141,10 @@ export const team = {
         brief_description:
             "Sophia Taylor serves as an invaluable interior stylist, infusing our designs with the essential finishing touches that transform spaces into inviting, harmonious, and truly complete environments. Her meticulous attention to detail and artistic sensibility shine through in her ability to enhance the visual and tactile aspects of our creations. Sophia's role is pivotal in ensuring that every project reaches its full potential, leaving an indelible mark of sophistication and warmth. With a keen eye for aesthetics and a deep understanding of the subtleties of design, she adds the perfect accents and arrangements that elevate our work to a new level of charm and comfort, making her an integral part of our design team.",
         skills: [
-            "Interior Styling",
-            "Accessory Selection",
-            "Home Staging",
-            "Visual Merchandising",
+            { name: "Interior Styling", percentage: 70 },
+            { name: "Accessory Selection", percentage: 80 },
+            { name: "Home Staging", percentage: 90 },
+            { name: "Visual Merchandising", percentage: 60 },
         ],
         },
         {
@@ -164,10 +164,10 @@ export const team = {
         brief_description:
             "Daniel Clark holds the pivotal position of project manager, dedicated to the meticulous and timely execution of our interior design projects. His role is instrumental in maintaining precision and efficiency throughout the project lifecycle. With a keen focus on the intricate details and adherence to strict timelines, Daniel safeguards that each endeavor unfolds seamlessly. His expertise extends to coordinating various elements of the design process, ensuring that the client's vision is brought to life with exacting accuracy. Daniel's commitment to delivering projects punctually and flawlessly underscores our commitment to excellence, reassuring clients that their interior design aspirations will be achieved with unparalleled precision and unwavering reliability.",
         skills: [
-            "Project Management",
-            "Budgeting",
-            "Client Communication",
-            "Vendor Coordination",
+            { name: "Project Management", percentage: 65 },
+            { name: "Budgeting", percentage: 70 },
+            { name: "Client Communication", percentage: 80 },
+            { name: "Vendor Coordination", percentage: 85 },
         ],
         },
         {
@@ -187,10 +187,10 @@ export const team = {
         brief_description:
             "Olivia Johnson serves as a dedicated design assistant, providing indispensable support to our interior design team across all facets of their creative endeavors. Her versatile role is pivotal in nurturing the success of our projects. Olivia's unwavering commitment to assisting interior designers in various capacities, from research to material selection and coordination, ensures that every design concept reaches its full potential. Her contributions are the bedrock upon which our projects thrive, exemplifying the seamless synergy that underlies our creative process. Olivia's profound dedication and capability enhance the team's productivity, affirming her pivotal role in bringing our interior design visions to life with utmost effectiveness and finesse.",
         skills: [
-            "Design Support",
-            "Material Sourcing",
-            "CAD Drafting",
-            "Color Consultation",
+            { name: "Design Support", percentage: 75 },
+            { name: "Material Sourcing", percentage: 60 },
+            { name: "CAD Drafting", percentage: 65 },
+            { name: "Color Consultation", percentage: 85 },
         ],
         },
     ],

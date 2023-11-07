@@ -11,7 +11,6 @@ import ServiceDetailsBlock from './pages/service/serviceDetailsBlock';
 import TeamPage from './pages/team/teamPage';
 import MemberDetailsBlock from './pages/team/memberDetailsBlock';
 
-
 function App() {
   return (
     <div className="App">
