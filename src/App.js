@@ -10,6 +10,7 @@ import ServicePage from "./pages/service/servicePage";
 import ServiceDetailsBlock from './pages/service/serviceDetailsBlock';
 import TeamPage from './pages/team/teamPage';
 import MemberDetailsBlock from './pages/team/memberDetailsBlock';
+import ContactPage from './pages/contact/contactPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/service/:id" element={<ServiceDetailsBlock />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/team/:id" element={<MemberDetailsBlock />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </div>

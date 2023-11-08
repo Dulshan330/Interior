@@ -5,6 +5,6 @@ export const navbar = {
     { text: "Team", link: "/team" },
     { text: "Project", link: "/" },
     { text: "Blog", link: "/" },
-    { text: "Contact", link: "/" },
+    { text: "Contact", link: "/contact" },
   ],
 };

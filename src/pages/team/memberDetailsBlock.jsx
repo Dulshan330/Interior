@@ -23,6 +23,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import LinearProgressCustomized from "./LinearProgressCustomized";
 
 function MemberDetailsBlock() {
     const { id } = useParams();
@@ -233,8 +234,7 @@ function MemberDetailsBlock() {
                         <Typography variant="body1" color="initial">
                         {item.name}
                         </Typography>
-                        <LinearProgress
-                        variant="determinate"
+                        <LinearProgressCustomized
                         value={item.percentage}
                         />
                     </Box>
@@ -495,8 +495,7 @@ function MemberDetailsBlock() {
                     <Typography variant="body1" color="initial">
                         {item.name}
                     </Typography>
-                    <LinearProgress
-                        variant="determinate"
+                    <LinearProgressCustomized
                         value={item.percentage}
                     />
                     </Box>
