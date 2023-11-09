@@ -1,16 +1,16 @@
 import React from "react";
 import LinearProgress from "@mui/material/LinearProgress";
-import {  styled } from "@mui/material/styles";
-import { themeColor, themeColor2 } from "../../config";
+import { themeColor,  } from "../../config";
+import { Box } from "@mui/material";
 
-const StyledLinearBar = styled(LinearProgress)({
-    backgroundColor: themeColor2,
-});
-
-    function LinearProgressCustomized(props) {
+function LinearProgressCustomized(props) {
     const { value } = props;
 
-    return <StyledLinearBar variant="determinate" value={value} />;
-    }
+    return (
+        <Box sx={{width:"100%", color:themeColor, }}>
+        <LinearProgress variant="determinate" color="inherit" value={value} />
+        </Box>
+    );
+}
 
 export default LinearProgressCustomized;
