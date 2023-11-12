@@ -27,6 +27,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-router-dom";
+import GoogleMap from "./map";
 
 function ContactPage() {
   // Responsive settings
@@ -301,6 +302,17 @@ function ContactPage() {
               </Box>
             </Box>
           </Box>
+          {/* Map Section */}
+          <Box
+            sx={{
+              width: mainWidth,
+              marginY: "3rem",
+              marginX: "auto",
+              height: "60vh",
+            }}
+          >
+            <GoogleMap />
+          </Box>
         </Box>
       )}
 
@@ -551,6 +563,16 @@ function ContactPage() {
                 Send Now &rarr;
               </Button>
             </Box>
+          </Box>
+          {/* Map Section */}
+          <Box
+            sx={{
+              marginY: "3rem",
+              marginX: "1rem",
+              height: "70vh",
+            }}
+          >
+            <GoogleMap />
           </Box>
         </Box>
       )}
