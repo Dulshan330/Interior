@@ -1,9 +1,7 @@
-import { Box, Typography, useMediaQuery, Grid } from "@mui/material";
+import { Box, useMediaQuery, Grid } from "@mui/material";
 import React from "react";
 import {
     desktopView,
-    font,
-    font2,
     mainWidth,
     mobileViewMax,
     mobileViewMin,
@@ -12,6 +10,7 @@ import {
 import banner from "../../assets/img/Team/banner.jpg";
 import { team } from "./teamInfo";
 import MemberBlock from "./memberBlock";
+import Banner from "../../components/banner/banner";
 
 function TeamPage() {
 
@@ -25,49 +24,9 @@ function TeamPage() {
         <Box>
         {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
-            <Box sx={{ marginTop: "5rem" }}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "40vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    width: mainWidth,
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "3rem 6rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography variant="h3" color="initial" fontFamily={font2}>
-                    Our Professional
-                    </Typography>
-                    <Typography
-                    variant="body1"
-                    color="initial"
-                    textAlign={"center"}
-                    fontFamily={font}
-                    >
-                    Home / Team
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={"Our Professional"} subTitle={"Team"} />
             {/* Team Section */}
             <Box sx={{ width: mainWidth, marginX: "auto", marginY: "4rem" }}>
                 <Grid
@@ -94,48 +53,9 @@ function TeamPage() {
         )}
         {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
-            <Box sx={{ marginTop: "4rem" }}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "30vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "2rem 2rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography variant="h4" color="initial" fontFamily={font2} textAlign={"center"}>
-                    Our Professional
-                    </Typography>
-                    <Typography
-                    variant="body2"
-                    color="initial"
-                    textAlign={"center"}
-                    fontFamily={font}
-                    >
-                    Home / Team
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={"Our Professional"} subTitle={"Team"} />
             {/* Team Section */}
             <Box sx={{ marginX: "auto", marginY: "3rem" }}>
                 <Grid

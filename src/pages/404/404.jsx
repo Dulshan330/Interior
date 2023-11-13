@@ -24,7 +24,6 @@ function Error404() {
         {desktopScreen && (
             <Box
             sx={{
-                marginTop: "5rem",
                 width: mainWidth,
                 marginX: "auto",
                 display: "flex",
@@ -86,7 +85,7 @@ function Error404() {
 
         {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
-            <Box sx={{marginTop:"4rem",display:"flex", flexDirection:"column",alignItems:"center"}}>
+            <Box sx={{display:"flex", flexDirection:"column",alignItems:"center"}}>
                 <Typography
                     sx={{ fontFamily: font2, color: themeColor, fontSize: "7rem",textAlign:"center" }}
                 >

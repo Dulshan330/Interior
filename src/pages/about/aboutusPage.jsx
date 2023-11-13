@@ -12,6 +12,7 @@ import theresult from "../../assets/img/AboutPage/Photo.jpg";
 import { mainWidth, themeColor2, white, themeColor, black, desktopView, mobileViewMax, mobileViewMin, font, font2 } from "../../config";
 import { about } from "./aboutInfo";
 import PeopleBlock from "./peopleBlock";
+import Banner from "../../components/banner/banner";
 
 function AboutusPage() {
 
@@ -25,52 +26,9 @@ function AboutusPage() {
         <Box>
         {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
-            <Box sx={{marginTop:"5rem"}}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "40vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    width: mainWidth,
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "3rem 9rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography
-                    variant="h3"
-                    color="initial"
-                    fontFamily={font2}
-                    >
-                    About Us
-                    </Typography>
-                    <Typography
-                    variant="body1"
-                    color="initial"
-                    textAlign={"center"}fontFamily={font}
-                    >
-                    Home / About Us
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={"About Us"} subTitle={"About Us"} />
             {/* Quotes Section */}
             <Box
                 sx={{
@@ -339,51 +297,9 @@ function AboutusPage() {
 
         {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
-            <Box sx={{marginTop:"4rem"}}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "30vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "2rem 4rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography
-                    variant="h4"
-                    color="initial"
-                    fontFamily={font2}
-                    >
-                    About Us
-                    </Typography>
-                    <Typography
-                    variant="body2"
-                    color="initial"
-                    textAlign={"center"}fontFamily={font}
-                    >
-                    Home / About Us
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={"About Us"} subTitle={"About Us"} />
             {/* Quotes Section */}
             <Box
                 sx={{

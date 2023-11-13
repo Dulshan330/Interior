@@ -16,6 +16,7 @@ import banner from "../../assets/img/Services/banner.jpg";
 import { service } from "./serviceInfo";
 import ServiceBlock from "./serviceBlock";
 import HowWeWorkBlock from "./howWeWorkBlock";
+import Banner from "../../components/banner/banner";
 
 function ServicePage() {
   // Responsive settings
@@ -28,49 +29,9 @@ function ServicePage() {
         <Box>
         {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
-            <Box sx={{ marginTop: "5rem" }}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "40vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    width: mainWidth,
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "3rem 9rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography variant="h3" color="initial" fontFamily={font2}>
-                    Services
-                    </Typography>
-                    <Typography
-                    variant="body1"
-                    color="initial"
-                    textAlign={"center"}
-                    fontFamily={font}
-                    >
-                    Home / Services
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={"Services"} subTitle={"Services"} />
             {/* Services Section */}
             <Box sx={{ width: mainWidth, marginX: "auto", marginTop: "5rem" }}>
                 <Grid
@@ -184,48 +145,9 @@ function ServicePage() {
         )}
         {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
-            <Box sx={{ marginTop: "4rem" }}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "30vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "2rem 6rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography variant="h4" color="initial" fontFamily={font2}>
-                    Services
-                    </Typography>
-                    <Typography
-                    variant="body2"
-                    color="initial"
-                    textAlign={"center"}
-                    fontFamily={font}
-                    >
-                    Home / Services
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={"Services"} subTitle={"Services"} />
             {/* Services Section */}
             <Box sx={{ marginX: "auto", marginTop: "5rem" }}>
                 <Grid

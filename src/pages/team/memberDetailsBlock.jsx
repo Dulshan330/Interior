@@ -1,5 +1,4 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
-import LinearProgress from "@mui/material/LinearProgress";
 import React from "react";
 import {
     desktopView,
@@ -8,9 +7,7 @@ import {
     mainWidth,
     mobileViewMax,
     mobileViewMin,
-    themeColor,
     themeColor2,
-    white,
 } from "../../config";
 import { useParams } from "react-router-dom";
 import { team } from "./teamInfo";
@@ -24,6 +21,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import LinearProgressCustomized from "./LinearProgressCustomized";
+import Banner from "../../components/banner/banner";
 
 function MemberDetailsBlock() {
     const { id } = useParams();
@@ -43,49 +41,9 @@ function MemberDetailsBlock() {
         <Box>
         {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
-            <Box sx={{ marginY: "5rem" }}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "40vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    width: mainWidth,
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "3rem 6rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography variant="h3" color="initial" fontFamily={font2}>
-                    Professional Single
-                    </Typography>
-                    <Typography
-                    variant="body1"
-                    color="initial"
-                    textAlign={"center"}
-                    fontFamily={font}
-                    >
-                    Home / Team
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={"Professional Single"} subTitle={"Team"} />
             {/* Member Details Section */}
             <Box
                 sx={{
@@ -313,53 +271,9 @@ function MemberDetailsBlock() {
         )}
         {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
-            <Box sx={{ marginY: "4rem" }}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "40vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "2rem 2rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography
-                    variant="h4"
-                    color="initial"
-                    fontFamily={font2}
-                    textAlign={"center"}
-                    >
-                    Professional Single
-                    </Typography>
-                    <Typography
-                    variant="body2"
-                    color="initial"
-                    textAlign={"center"}
-                    fontFamily={font}
-                    >
-                    Home / Team
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={"Professional Single"} subTitle={"Team"} />
             {/* Member Details Section */}
             <Box
                 sx={{

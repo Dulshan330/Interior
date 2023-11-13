@@ -8,7 +8,7 @@ import {
     Button
 } from "@mui/material";
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { service } from "./serviceInfo";
 import Error404 from "../404/404";
 import {
@@ -20,13 +20,12 @@ import {
     mobileViewMax,
     mobileViewMin,
     themeColor,
-    themeColor2,
-    white,
 } from "../../config";
 import banner from "../../assets/img/Services/singleServiceBanner.jpg";
 import result from "../../assets/img/Services/result.jpg";
 import Counter from "../../components/counter/counter";
 import ClientLogo from "../../components/clientLogo/clientLogo";
+import Banner from "../../components/banner/banner";
 
 function ServiceDetailsBlock() {
     const { id } = useParams();
@@ -46,49 +45,9 @@ function ServiceDetailsBlock() {
         <Box>
         {/* ----------------- For Desktops ----------------- */}
         {desktopScreen && (
-            <Box sx={{ marginTop: "5rem" }}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "40vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    width: mainWidth,
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "3rem 9rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography variant="h3" color="initial" fontFamily={font2}>
-                    {selectedService.title}
-                    </Typography>
-                    <Typography
-                    variant="body1"
-                    color="initial"
-                    textAlign={"center"}
-                    fontFamily={font}
-                    >
-                    Home / Services
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={selectedService.title} subTitle={"Services"} />
             {/* Details Section */}
             <Box
                 sx={{
@@ -260,48 +219,9 @@ function ServiceDetailsBlock() {
         )}
         {/* ----------------- For Mobile Phones ----------------- */}
         {mobilePhoneScreen && (
-            <Box sx={{ marginTop: "4rem" }}>
+            <Box>
             {/* Banner Section */}
-            <Box
-                sx={{
-                background: `url(${banner})`,
-                height: "30vh",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                display: "flex",
-                }}
-            >
-                <Box
-                sx={{
-                    marginX: "auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                }}
-                >
-                <Box
-                    sx={{
-                    backgroundColor: white,
-                    padding: "2rem 2rem",
-                    borderTopLeftRadius: "2rem",
-                    borderTopRightRadius: "2rem",
-                    }}
-                >
-                    <Typography variant="h4" color="initial" fontFamily={font2} textAlign={"center"}> 
-                    {selectedService.title}
-                    </Typography>
-                    <Typography
-                    variant="body2"
-                    color="initial"
-                    textAlign={"center"}
-                    fontFamily={font}
-                    >
-                    Home / Services
-                    </Typography>
-                </Box>
-                </Box>
-            </Box>
+            <Banner img={banner} title={selectedService.title} subTitle={"Services"} />
             {/* Details Section */}
             <Box
                 sx={{

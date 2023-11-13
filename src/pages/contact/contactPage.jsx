@@ -28,6 +28,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-router-dom";
 import GoogleMap from "./map";
+import Banner from "../../components/banner/banner";
 
 function ContactPage() {
   // Responsive settings
@@ -40,49 +41,9 @@ function ContactPage() {
     <Box>
       {/* ----------------- For Desktops ----------------- */}
       {desktopScreen && (
-        <Box sx={{ marginTop: "5rem" }}>
+        <Box>
           {/* Banner Section */}
-          <Box
-            sx={{
-              background: `url(${banner})`,
-              height: "40vh",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              display: "flex",
-            }}
-          >
-            <Box
-              sx={{
-                width: mainWidth,
-                marginX: "auto",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  backgroundColor: white,
-                  padding: "3rem 6rem",
-                  borderTopLeftRadius: "2rem",
-                  borderTopRightRadius: "2rem",
-                }}
-              >
-                <Typography variant="h3" color="initial" fontFamily={font2}>
-                  Contact Us
-                </Typography>
-                <Typography
-                  variant="body1"
-                  color="initial"
-                  textAlign={"center"}
-                  fontFamily={font}
-                >
-                  Home / Contact
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
+          <Banner img={banner} title={"Contact Us"} subTitle={"Contact"} />
           {/* Contact Form Section */}
           <Box sx={{ width: mainWidth, marginY: "4rem", marginX: "auto" }}>
             <Typography
@@ -318,48 +279,9 @@ function ContactPage() {
 
       {/* ----------------- For Mobile Phones ----------------- */}
       {mobilePhoneScreen && (
-        <Box sx={{ marginTop: "4rem" }}>
+        <Box>
           {/* Banner Section */}
-          <Box
-            sx={{
-              background: `url(${banner})`,
-              height: "30vh",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              display: "flex",
-            }}
-          >
-            <Box
-              sx={{
-                marginX: "auto",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  backgroundColor: white,
-                  padding: "2rem 4rem",
-                  borderTopLeftRadius: "2rem",
-                  borderTopRightRadius: "2rem",
-                }}
-              >
-                <Typography variant="h4" color="initial" fontFamily={font2}>
-                  Contact Us
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="initial"
-                  textAlign={"center"}
-                  fontFamily={font}
-                >
-                  Home / Contact
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
+          <Banner img={banner} title={"Contact Us"} subTitle={"Contact"} />
           {/* Contact Form Section */}
           <Box sx={{ marginY: "3rem", marginX: "auto" }}>
             <Typography

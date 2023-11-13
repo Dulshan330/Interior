@@ -34,7 +34,7 @@ function HomePage() {
     <Box>
       {/* ----------------- For Desktops ----------------- */}
       {desktopScreen && (
-        <Box sx={{ marginTop: "5rem" }}>
+        <Box>
           {/* Hero section  */}
           <Box
             sx={{
@@ -317,6 +317,8 @@ function HomePage() {
               backgroundColor: black,
               borderRadius: "2rem",
               paddingY: "5rem",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
             <Typography
@@ -345,13 +347,13 @@ function HomePage() {
                   backgroundColor: themeColor2,
                   color: black,
                 },
-                display: "block",
                 marginY: "1rem",
                 marginX: "auto",
                 paddingY: "1rem",
                 paddingX: "2rem",
                 borderRadius: "20px",
               }}
+              href="/contact"
             >
               Contact With Us &rarr;
             </Button>
@@ -361,7 +363,7 @@ function HomePage() {
 
       {/* ----------------- For Mobile Phones ----------------- */}
       {mobilePhoneScreen && (
-        <Box sx={{ marginTop: "4rem" }}>
+        <Box>
           {/* Hero section  */}
           <Box
             sx={{
@@ -663,13 +665,16 @@ function HomePage() {
                   backgroundColor: themeColor2,
                   color: black,
                 },
-                display: "block",
                 marginY: "1rem",
                 marginX: "auto",
                 paddingY: "1rem",
                 paddingX: "2rem",
                 borderRadius: "20px",
+                display: "flex",
+                flexDirection: "column",
+                width: "fit-content",
               }}
+              href="/contact"
             >
               Contact With Us &rarr;
             </Button>
