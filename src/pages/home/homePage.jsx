@@ -338,7 +338,6 @@ function HomePage() {
               It is a long established fact will be distracted.
             </Typography>
             <Button
-              href="/contact"
               variant="contained"
               sx={{
                 backgroundColor: themeColor,
@@ -657,7 +656,6 @@ function HomePage() {
               It is a long established fact will be distracted.
             </Typography>
             <Button
-              href="/contact"
               variant="contained"
               sx={{
                 backgroundColor: themeColor,
