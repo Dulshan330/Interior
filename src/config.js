@@ -1,5 +1,3 @@
-import { api_key } from "./API_Key";
-
 // config.js
 export const mainWidth = "1280px";
 
@@ -19,4 +17,4 @@ export const font = "roboto,sans-serif";
 export const font2 = "DM Serif Display";
 
 // API Keys
-export const googleMapAPIKey = api_key;
+export const googleMapAPIKey = null;
