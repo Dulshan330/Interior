@@ -17,4 +17,4 @@ export const font = "roboto,sans-serif";
 export const font2 = "DM Serif Display";
 
 // API Keys
-export const googleMapAPIKey = null;
+export const googleMapAPIKey = null; // paste the api key here.

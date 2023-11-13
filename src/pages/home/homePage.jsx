@@ -23,7 +23,6 @@ import ArticleBlock from "./articleBlock";
 import Counter from "../../components/counter/counter";
 import ClientLogo from "../../components/clientLogo/clientLogo";
 
-
 function HomePage() {
   // Responsive settings
   const desktopScreen = useMediaQuery(desktopView);
@@ -35,7 +34,7 @@ function HomePage() {
     <Box>
       {/* ----------------- For Desktops ----------------- */}
       {desktopScreen && (
-        <Box sx={{marginTop:"5rem"}}>
+        <Box sx={{ marginTop: "5rem" }}>
           {/* Hero section  */}
           <Box
             sx={{
@@ -224,7 +223,7 @@ function HomePage() {
             </Box>
           </Box>
           {/* Client Logo Section */}
-          <ClientLogo/>
+          <ClientLogo />
           {/* Project Section */}
           <Box
             sx={{
@@ -274,7 +273,7 @@ function HomePage() {
             </Grid>
           </Box>
           {/* counter Section */}
-          <Counter/>
+          <Counter />
           {/* Article Section */}
           <Box sx={{ width: mainWidth, marginX: "auto", marginY: "5rem" }}>
             <Typography
@@ -339,6 +338,7 @@ function HomePage() {
               It is a long established fact will be distracted.
             </Typography>
             <Button
+              href="/contact"
               variant="contained"
               sx={{
                 backgroundColor: themeColor,
@@ -362,7 +362,7 @@ function HomePage() {
 
       {/* ----------------- For Mobile Phones ----------------- */}
       {mobilePhoneScreen && (
-        <Box sx={{marginTop:"4rem"}}>
+        <Box sx={{ marginTop: "4rem" }}>
           {/* Hero section  */}
           <Box
             sx={{
@@ -538,7 +538,7 @@ function HomePage() {
             </Box>
           </Box>
           {/* Client Logo Section */}
-          <ClientLogo/>
+          <ClientLogo />
           {/* Project Section */}
           <Box
             sx={{
@@ -587,7 +587,7 @@ function HomePage() {
             </Grid>
           </Box>
           {/* counter Section */}
-          <Counter/>
+          <Counter />
           {/* Article Section */}
           <Box sx={{ marginX: "1rem", marginY: "5rem" }}>
             <Typography
@@ -657,6 +657,7 @@ function HomePage() {
               It is a long established fact will be distracted.
             </Typography>
             <Button
+              href="/contact"
               variant="contained"
               sx={{
                 backgroundColor: themeColor,
