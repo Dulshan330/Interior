@@ -24,3 +24,4 @@ yarn-error.log*
 
 # Google API Key file
 API_Key.js
+firebaseConfig.js

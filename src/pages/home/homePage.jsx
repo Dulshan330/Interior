@@ -22,6 +22,7 @@ import ProjectBlock from "./projectBlock";
 import ArticleBlock from "./articleBlock";
 import Counter from "../../components/counter/counter";
 import ClientLogo from "../../components/clientLogo/clientLogo";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   // Responsive settings
@@ -318,7 +319,7 @@ function HomePage() {
               borderRadius: "2rem",
               paddingY: "5rem",
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "column",alignItems:"center"
             }}
           >
             <Typography
@@ -339,6 +340,7 @@ function HomePage() {
             >
               It is a long established fact will be distracted.
             </Typography>
+            <Link to={"/contact"} >
             <Button
               variant="contained"
               sx={{
@@ -353,10 +355,9 @@ function HomePage() {
                 paddingX: "2rem",
                 borderRadius: "20px",
               }}
-              href="/contact"
             >
               Contact With Us &rarr;
-            </Button>
+            </Button></Link>
           </Box>
         </Box>
       )}
